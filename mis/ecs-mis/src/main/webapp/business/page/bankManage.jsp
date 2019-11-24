@@ -39,6 +39,7 @@ function clearsearch(){
 		<td><a href="#" class="easyui-linkbutton"
 			data-options="iconCls:'icon-search'" onclick=searchbankdata()>搜索</a></td>
         <td><input type = "button" value = "清空" onclick=clearsearch()></td>
+        <td><input type = "button" value = "清空" onclick=clearsearch()></td>
 	</tr>
 </table></div>
 

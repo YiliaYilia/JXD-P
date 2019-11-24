@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+html,head,body,div,ul,li,p,table,tr,td,a,img{margin:0;padding:0;font-size:14px;font-family: Microsoft YaHei;}
+a{text-decoration: none;color:#fff;}
+img{width:100%;border:0;}
+.page{width:100%;repeat:no-repeat;position:relative;z-index:-1;}
+.transfer_btn{position:absolute;z-index:1;top:92%;left:15%;width:70%;float：left;}
+.left_btn{border-radius:10px;border-bottom:6px solid grey;width:45%;height:40px;background-color:#6be126;color:#fff;font-size:1.8em;text-align:center;line-height:40px;margin:0 auto;float:left;}
+.right_btn{border-radius:10px;border-bottom:6px solid grey;width:50%;height:40px;background-color:#ff9c00;color:#fff;font-size:1.8em;text-align:center;line-height:40px;margin-left:20px;float:left}

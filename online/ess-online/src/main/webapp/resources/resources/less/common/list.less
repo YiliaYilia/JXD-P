@@ -1,0 +1,30 @@
+.list{
+	&.sale{
+		li{
+			border:0;
+			padding:0;
+			@media (max-width: @screen-sm-min){
+				border-top:1px solid #8d8074;
+				padding:0 13px;
+			}
+		}
+	}
+	&.qt{
+		li{
+			border-top:1px solid #cfcac5;
+			padding:0 115px;
+			@media (max-width: @screen-sm-min){
+				padding:0 13px;
+				border-top:1px solid #8d8074;
+			}
+		}
+	}
+	
+	li{
+		
+		@media (max-width: @screen-sm-min){
+			padding:0 13px;
+			border-top:1px solid #8d8074;
+		}
+	}
+}

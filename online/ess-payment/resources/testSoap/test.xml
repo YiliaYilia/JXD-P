@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="com.skandia.linkwebService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:saveSwitchPolicy>
+         <!--Optional:-->
+         <com:sessionId>?</com:sessionId>
+         <!--Optional:-->
+         <com:policyNbr>?</com:policyNbr>
+         <!--Optional:-->
+         <com:alSwitch>
+            <!--Zero or more repetitions:-->
+            <com:SwitchAccountVO>
+               <!--Optional:-->
+               <com:IvmtAcctID>?</com:IvmtAcctID>
+               <!--Optional:-->
+               <com:SwitchRatio>?</com:SwitchRatio>
+            </com:SwitchAccountVO>
+         </com:alSwitch>
+      </com:saveSwitchPolicy>
+   </soapenv:Body>
+</soapenv:Envelope>

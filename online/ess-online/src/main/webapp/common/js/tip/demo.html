@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+      * { font-family: monaco; color: white; }
+      div.item { width:100px; height:50px; background-color: maroon;  }
+                   
+    </style>
+    <link rel="stylesheet" href="stylesheets/jquery.tooltip/jquery.tooltip.css" type="text/css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.tooltip.js"></script>
+    <script type="text/javascript">
+     // $j = jQuery.noConflict();
+      $(document).ready(function(){
+        $("div.item").tooltip();
+      });
+    </script>
+  </head>
+
+  <body>
+
+     <div>
+
+	      <div id="item_4" class="item">
+	        Item 4
+	        <div class="tooltip_description" style="display:none" >
+	          4
+	        </div>
+	      </div>
+      </div>
+
+  </body>
+</html>

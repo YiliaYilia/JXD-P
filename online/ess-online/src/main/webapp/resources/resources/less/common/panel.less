@@ -1,0 +1,42 @@
+.panel{
+	
+	@media (max-width: @screen-sm-min){
+		padding-left:46px;
+		padding-right:35px;
+		border:0;
+	}
+	
+	&-head{
+		font-size:18px;
+		font-weight:bold;
+		color:#076c40;
+		padding:15px 0 10px;
+		@media (max-width: @screen-sm-min){
+			display:none;
+		}
+	}
+	
+	&-body{
+		border:2px solid #076c40;
+		box-shadow: 5px 5px 10px #CCC;
+		padding-left:25px;
+		padding-right:25px;
+		padding-top:5px;
+		padding-bottom:22px;
+		
+		@media (max-width: @screen-sm-min){
+			padding:0;
+			border:0;
+			box-shadow:none;
+		}
+	}
+	
+	&.amount{
+		.panel-body{
+			border:0;
+			box-shadow: none;
+			padding:0;
+		}
+	}
+	
+}

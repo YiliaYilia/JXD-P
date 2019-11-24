@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+html,head,body,div,ul,li,p,table,tr,td{margin:0;padding:0;font-family: Microsoft YaHei;}
+ul,li{list-style: none;}
+#head{text-align:center;font-size:1.5em;height:60px;background-color:#ffff8d;line-height:60px;}
+.head_left{text-align: left;font-size:1.5em;margin:10px auto;}.page{width:80%;margin:0 auto;}
+.btn{
+	width:80%;
+	font-size:1.4em;
+	height:50px;
+	border-radius:5px;
+	ground-color:#d95215;
+	text-align:center;
+	color: #fff;
+	margin:0 auto;
+	display: block;
+	}
+.bottom{width:100%;margin:40px auto;}
+.left_bottom{width:50%;float:left;}
+.right_bottom{width:50%;float:left;}
+.left_btn{width:40%;
+	font-size:1.4em;
+	height:50px;
+	border-radius:5px;
+	background-color:#d95215;
+	text-align:center;
+	line-height:50px;
+	color: #fff;
+	margin:0 auto;
+	margin-bottom:50px;
+	}

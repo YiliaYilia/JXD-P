@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+   <Head>
+      <Flag>0</Flag>
+      <!--交易结果代码,0成功，1失败-->
+      <Desc>交易成功！</Desc>
+      <!--交易结果描述-->
+   </Head>
+</TranData>
+

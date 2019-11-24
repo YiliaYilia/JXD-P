@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	font-family:"微软雅黑";}
+.grace-head{
+	width:100%;
+	height:70px;
+	background:url(../images/header.jpg) center center;
+	background-size:cover;
+	position:fixed;
+	top:0px;
+	z-index:999;
+	}
+.grace-banner{
+	margin-top:70px;}
+.grace-search{
+	height:70px;
+	margin-right:10px;
+	}
+.content{
+	font-size:2.2em;
+	font-family:"微软雅黑";
+	border-bottom:none;
+	color:#c49f46;}
+.grace-buttonmoney{
+	width:100%;
+	overflow:hidden;
+	font-family:"微软雅黑";}
+.grace-buttonmoney li{
+	width:48%;
+	height:60px;
+	background:#309;
+	font-size:1.4em;
+	}
+
+.grace-buttonmoney li.grace-button1{
+	border:1px solid #c8aa6f;
+	background:#faf4e8;
+	color:#000000;
+	line-height:60px;
+	text-align:center;}
+.grace-buttonmoney li.grace-button1 span{
+	color:#ab8020;
+	font-weight:bold;}
+.grace-buttonmoney li.grace-button2{
+	border:1px solid #c8aa6f;
+	background:#e8c26d;
+	color:#000000;
+	line-height:60px;
+	text-align:center;
+	}
+
+
+.grace-info{
+	width:90%;
+	margin:0 auto;
+	
+	}
+.grace-info   .info{
+	width:33%;
+	margin-right:0.3%;
+	height:60px;
+	line-height:60px;
+	background:#f5e9d1;
+	color:#77694e;
+	float:left;
+	font-size:1.6em;
+	font-family:"微软雅黑";
+	font-weight:bold;}
+.grace-info .info-select {
+	background:#e8c26d;
+	color:#4f3d18;
+	position:relative;}
+.grace-info .info-select  span{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #e8c26d;
+	position:absolute;
+	top:60px;
+	left:45%;
+	
+	
+	}
+.info2-con,.info3-con{
+	display:none;}
+	
+.center .table tr td{
+	padding:14px 0px;
+}
+
+.grace-top-menu{
+	width:98%;
+	
+	margin:0 auto;
+	margin-top:70px;
+	overflow:hidden;
+	}
+.grace-top-menu li{
+	width:24.5%;
+	float:left;
+	margin-right:0.5%;
+	padding:8px;
+	border:1px solid #dfdfdf;
+	background:#fffbf5;
+	color:#7e7563;
+	text-align:center;
+	border-radius:4px;
+	}
+	.grace-top-menu li.menu-select{
+		background:#e0ba67;
+		color:#604d25;}
+.grace-form{
+	width:96%;
+	margin:0 auto;
+	border-top:1px solid #dfdfdf;
+	border-left:1px solid #dfdfdf;
+	border-right:1px solid #dfdfdf;}
+.grace-form li{
+	padding:10px;
+	border-bottom:1px solid #dfdfdf;
+	overflow:hidden;
+	background:#fff;
+	color:#666;
+	}
+.grace-info-tl{
+	font-size:16px;
+	
+width:96%;
+	margin:0 auto;
+	padding:10px;
+	font-weight:bold;
+	color:#c89b4a;
+	display:block;
+	border-bottom:1px solid #dfdfdf;
+	}
+.grace-info-tl span{
+	font-size:1.5em;
+	color:#666;}
+.grace-form .pull-left{
+	width:25%;
+	text-align:left;}
+.grace-form .pull-right{
+	width:75%;
+	text-align:left;}
+.grace-form .pull-right input{
+	width:100%;
+	background:transparent;
+	border:none;}
+.grace-applicant-info{
+	width:96%;
+	margin:0 auto;
+	overflow:hidden;
+	border:1px solid #dfdfdf;
+	background:#fff;
+	}
+.grace-applicant-info li{
+	width:50%;
+	float:left;
+	text-align:center;
+	color:#666;
+	padding:10px;}
+.grace-form li.grace-tips{
+	font-size:12px;
+	color:#c69e47;}
+.grace-form li.grace-tips span{
+	font-size:14px;}
+.next-button{
+	width:96%;
+	margin:0 auto;
+	margin-top:20px;
+	margin-bottom:20px;}
+.footer{
+	width:100%;
+	}
+.health-info-con{
+	width:96%;
+	padding:10px;
+	background:#fff;
+	border-radius:4px;
+	margin:0 auto;
+	font-size:1em;
+	}
+.health-info-con p{
+	padding-bottom:10px;
+	border-bottom:1px dotted #dfdfdf;
+	color:#666;
+	}
+.health-info-con span{
+	font-size:1.1em;
+	colorl:#000;
+	display:block;
+	font-weight:bold;
+	margin-bottom:10px;
+	}
+.choose-con{
+	width:96%;
+	margin:0 auto;
+	
+	}
+.choose-con2{
+	width:96%;
+	margin:0 auto;
+	padding:5px;
+	font-size:0.9em;
+	
+	}
+.choose-con2 span{
+	color:#be993e;}
+.choose-con li{
+	font-size:1.2em;
+	font-weight:bold;
+	color:#caa650;
+	}
+.yes-success{
+	width:60px;
+	height:60px;
+	margin:0 auto;
+	margin-top:100px;
+	margin-bottom:20px;}
+.result{
+	font-size:1em;
+	color:#666;
+	text-align:center;
+	line-height:2em;}
+.result span{
+	color:#F30;
+	font-size:1.2em;
+	}

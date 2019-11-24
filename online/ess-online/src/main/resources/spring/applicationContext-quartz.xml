@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="quartzWechatJsapiTicketService" class="cn.com.sinosoft.web.service.impl.QuartzWechatJsapiTicketServiceImpl"></bean>		
+	<bean id="eaccoutService" class="cn.com.sinosoft.web.service.impl.EaccoutServiceImpl"></bean>
+	<bean id="eaccoutService2" class="cn.com.sinosoft.web.service.impl.EaccoutServiceImpl"></bean>
+	<bean id="OrderOueryCheck" class="cn.com.sinosoft.web.service.impl.OrderOueryCheckImpl"></bean>
+	<bean id="ElectronicPolicyQuery" class="cn.com.sinosoft.web.service.impl.ElectronicPolicyQueryServiceImpl"></bean>
+	<!--<bean id="sinoImageService" class="cn.com.sinosoft.web.service.impl.SinoImageServiceImpl"></bean>-->
+	
+	<!-- 定时器获取ticket -->
+	<!-- <bean id="getTicketQuartz" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> -->
+		<!-- 调用的类 -->
+		<!-- <property name="targetObject">
+			<ref bean="quartzWechatJsapiTicketService" />
+		</property> -->
+		<!-- 调用类中的方法 -->
+		<!-- <property name="targetMethod">
+			<value>doTaskJsapiTicketBySocket</value>
+			<value>doTaskJsapiTicket</value>
+		</property>
+	</bean> -->
+	<!-- 定义触发时间 -->
+<!--	
+	<bean id="WechatJsapiTicket" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="getTicketQuartz" />
+		</property>
+-->
+		<!-- cron表达式 -->
+		<!-- 秒 0-59 , - * / 分 0-59 , - * / 小时 0-23 , - * / 日期 1-31 , - * ? / L W C 月份 1-12 或者 JAN-DEC , - * / 星期 1-7 或者 SUN-SAT , - * ? / L C # 年（可选） 留空, 1970-2099 , - * / -->
+<!--
+		<property name="cronExpression">
+             <value>0 0/10 * * * ?</value>
+		</property>
+	</bean>
+-->
+	<!--  定时任务触发时间  从服务启动开始，每隔多长时间执行一次-->
+	<!-- <bean id="WechatJsapiTicket" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail">
+			<ref bean="getTicketQuartz" />
+		</property> -->
+		<!--实例化后，经过0秒开始执行 -->
+		<!-- <property name="startDelay" value="0" /> -->
+		<!-- 每30分钟2秒执行1次  1802000 3 分钟:180000--> 
+		<!-- <property name="repeatInterval" value="1802000" /> 
+	</bean> -->
+
+
+	<!--  定时器对账 -->
+   	<bean id="AccoutServiceQuartz" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="eaccoutService" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>checkByLongPolicy</value>
+		</property>
+	</bean>
+	<!-- 定义触发时间 -->
+	<bean id="AccoutService" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="AccoutServiceQuartz" />
+		</property>
+		<!-- cron表达式 -->
+		<!-- 秒 0-59 , - * / 分 0-59 , - * / 小时 0-23 , - * / 日期 1-31 , - * ? / L W C 月份 1-12 或者 JAN-DEC , - * / 星期 1-7 或者 SUN-SAT , - * ? / L C # 年（可选） 留空, 1970-2099 , - * / -->
+		<property name="cronExpression">
+			<!-- 每天早上8点触发 -->
+			<value>0 0 12 * * ?</value>
+		</property>
+	</bean>
+	
+	<!--  定时器对账 -->
+   	<bean id="AccoutServiceQuartz2" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="eaccoutService2" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>checkByLongPolicyAgain</value>
+		</property>
+	</bean>
+	<!-- 定义触发时间 -->
+	<bean id="AccoutService2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="AccoutServiceQuartz2" />
+		</property>
+		<!-- cron表达式 -->
+		<!-- 秒 0-59 , - * / 分 0-59 , - * / 小时 0-23 , - * / 日期 1-31 , - * ? / L W C 月份 1-12 或者 JAN-DEC , - * / 星期 1-7 或者 SUN-SAT , - * ? / L C # 年（可选） 留空, 1970-2099 , - * / -->
+		<property name="cronExpression">
+			<!-- 每天早上8点触发 -->
+			<value>0 30 12 * * ?</value>
+		</property>
+	</bean>
+	<!--  定时器更新银行代扣订单状态 -->
+   	<bean id="OrderOueryCheckQuartz" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="OrderOueryCheck" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>OrderStatusCheck</value>
+		</property>
+	</bean>
+	<!-- 定义触发时间 -->
+	<bean id="OrderOueryCheckQ" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="OrderOueryCheckQuartz" />
+		</property>
+		<!-- cron表达式 -->
+		<!-- 秒 0-59 , - * / 分 0-59 , - * / 小时 0-23 , - * / 日期 1-31 , - * ? / L W C 月份 1-12 或者 JAN-DEC , - * / 星期 1-7 或者 SUN-SAT , - * ? / L C # 年（可选） 留空, 1970-2099 , - * / -->
+		<property name="cronExpression">
+			<!-- 每天下午15点触发 -->
+			<value>0 0 15 * * ?</value>
+		</property>
+	</bean>
+	
+	
+	<!-- 定义定时器删除电子保单 -->
+	<bean id="ElectronicPolicyQuartz" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="ElectronicPolicyQuery"/>
+		</property>
+		<property name="targetMethod">
+			<value>delete</value>
+		</property>
+	</bean>
+	<!-- 定义触发时间 -->
+	<bean id="ElectronicPolicyQ" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	 	<property name="jobDetail">
+	 		<ref bean="ElectronicPolicyQuartz"/>
+	 	</property>
+	 	<property name="cronExpression">
+	 		<value>0 0 23 * * ?</value>
+	 	</property>
+	</bean>
+	
+	<!-- 定时批量上传资料到影像系统 -->
+   	<!--<bean id="sinoImageServiceQuartz" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		&lt;!&ndash; 调用的类 &ndash;&gt;
+		<property name="targetObject">
+			<ref bean="sinoImageService" />
+		</property>
+		&lt;!&ndash; 调用类中的方法 &ndash;&gt;
+		<property name="targetMethod">
+			<value>sinoImageBatchUpload</value>
+		</property>
+	</bean>-->
+	<!-- 定义触发时间 -->
+	<!--<bean id="sinoImageServiceTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="sinoImageServiceQuartz" />
+		</property>
+		&lt;!&ndash; cron表达式 &ndash;&gt;
+		&lt;!&ndash; 秒 0-59 , - * / 分 0-59 , - * / 小时 0-23 , - * / 日期 1-31 , - * ? / L W C 月份 1-12 或者 JAN-DEC , - * / 星期 1-7 或者 SUN-SAT , - * ? / L C # 年（可选） 留空, 1970-2099 , - * / &ndash;&gt;
+		<property name="cronExpression">
+			&lt;!&ndash; 每天早上8点触发 &ndash;&gt;
+			<value>0 50 15 * * ?</value>
+		</property>
+	</bean>-->
+
+	<bean id="startQuertz" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+		<property name="triggers">  
+			<list>   
+				<ref bean="AccoutService" />  
+				<!-- <ref bean="WechatJsapiTicket" />   -->
+				<ref bean="AccoutService2" />  
+				<ref bean="OrderOueryCheckQ" /> 
+				<ref bean="ElectronicPolicyQ"/>
+				<!--<ref bean="sinoImageServiceTrigger"/>-->
+			</list> 
+		</property>  
+	</bean> 
+	
+</beans>

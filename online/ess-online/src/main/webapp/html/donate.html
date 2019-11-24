@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>国电资本控股</title>
+	
+	<link rel="stylesheet" type="text/css" href="../resources/css/charity/wechat.css">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  </head>
+  	<script>
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var ua = navigator.userAgent;
+		if (/Android (\d+\.\d+)/.test(ua)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+	
+  <body id="mainPage">
+  	<section style="width:100%;height:50%;">
+    	<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx618b6902989a293e&redirect_uri=http://testweixin.oldmutual-guodian.com/online/msl/sales/charityPolicyHome&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect">
+    	<img src="../resources/image/charity/donate.jpg"/></a>
+    </section >
+    <section style="width:100%;height:50%">
+    	<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx618b6902989a293e&redirect_uri=http://testweixin.oldmutual-guodian.com/online/msl/sales/findHonorStatus&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect ">
+    	<img src="../resources/image/charity/inquiry.jpg"/></a>
+  	</section>
+  <!-- 	<section style="width:100%;height:50%;">
+    	<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=http://weixin.oldmutual-guodian.com/onlineTaste/msl/sales/charityPolicyHome&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect">
+    	<img src="../resources/image/charity/donate.jpg"/></a>
+    </section >
+    <section style="width:100%;height:50%">
+    	<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=http://weixin.oldmutual-guodian.com/onlineTaste/msl/sales/findHonorStatus&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect ">
+    	<img src="../resources/image/charity/inquiry.jpg"/></a>
+  	</section> -->
+  </body>
+  		<script type="text/javascript">
+	 		var browserHeight =  document.documentElement.clientHeight;
+			document.getElementById("mainPage").style.height=browserHeight+'px';
+	  </script>
+</html>

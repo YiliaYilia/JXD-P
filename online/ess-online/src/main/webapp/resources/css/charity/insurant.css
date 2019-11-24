@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+html,head,body,div,ul,li,p,table,tr,td{margin:0;padding:0;font-family: Microsoft YaHei;}
+body{font-size:14px;font-family:'Microsoft yahei';}
+ul,li{list-style: none;}
+#head{text-align:center;font-size:2.5em;height:60px;background-color:#ffff8d;line-height:60px;}
+.head_left{text-align: left;font-size:2.2em;margin:20px auto;margin-left: 4%;}
+.detail{width:100%;margin:0 2%;margin-top:20px;}
+.left_detail{float:left;width:40%;height:360px;margin:0 auto;text-align:center;}
+.right_detail{float:left;width:58%;height:360px;padding-left:2%;font-size:20px;}
+.right_detail ul{line-height:40px;;text-align:left;}
+.notice{font-size:1.0em;color:red;margin:10px auto;width:100%;}
+
+.table tr td{padding:20px 0;}
+ table tr td{font-size:1.4em;}
+.btn{
+	width:80%;
+	font-size:2.0em;
+	height:60px;
+	border-radius:5px;
+	background-color:#d95215;
+	text-align:center;
+	color: #fff;
+	margin:0 auto;
+	display: block;
+	line-height:60px;
+	margin:60px auto; 
+	}
+.bottom{width:100%;margin:20px auto;}
+.bottom_btn{
+	width:80%;margin:40px auto;
+	font-size:2.0em;
+	height:60px;
+	border-radius:5px;
+	background-color:#d95215;
+	text-align:center;
+	color: #FFF;
+	line-height:60px;
+	}
+
+#agree{width:90%;margin: 20px auto;}
+a{text-decoration: none;}
+.ensure {font-size:2.0em;margin:40px auto;width:90%;margin:20px auto;}
+.ensure input{width:25px; height:25px;}
+.note{color:red;font-size:1.2em;width:90%;margin:30px auto;line-height:2.0em;}
+
+img{width:100%;}
+.photo{
+	width:240px; height:340px;
+}
+.product{width:100%;position:relative;z-index:-1;}
+.product_btn{width:60%;height:60px;z-index:2;background-color:#ff4a01;border-radius:5px;text-align:center;margin-top:-20%;margin-left:20%;text-align:center;
+			color: #FFF;line-height:60px;font-size:2.0em;}
+
+.page{width:100%;repeat:no-repeat;position:relative;z-index:-1;}
+.page_btn{width:78%;position:absolute;top:90%;left:12%;background-color:#12a112;font-size:2.0em;color:#FFF;text-align:center;height:60px;line-height:60px;}.right_btn{width:20%;position:absolute;z-index:1;top:0;right:0;;}
+.page_foot{width:26%;height:4%;position:absolute;top:94%;left:38%;}
+
+/* .msg{font-size:1.0em;} */

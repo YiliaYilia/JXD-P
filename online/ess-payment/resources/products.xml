@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productInfo>
+	<productNPACA>
+		<productCode>NPACA</productCode>
+		<productName>盛世丰年年金保险（分红型）</productName>
+		<productImpagePath>/icbc/investmentlinked/images/img02.gif</productImpagePath>
+		<productPrice>2000</productPrice>
+		<productDepict>我们都追求更优越的人生品质，都憧憬更惬意的退休生活。您是否想过，您的晚年生活，其实可 ...</productDepict>
+		<productLink></productLink>
+	</productNPACA>
+	<productBCIB>
+		<productCode>BCIB</productCode>
+		<productName>御立方二号保障计划</productName>
+		<productImpagePath>/icbc/investmentlinked/images/img03.jpg</productImpagePath>
+		<productPrice>1000</productPrice>
+		<productDepict>40种重大疾病保障，面面俱到，最多3次重大疾病赔付，不离不弃...</productDepict>
+		<productLink></productLink>
+	</productBCIB>
+	<productFTA>
+		<productCode>FTA</productCode>
+		<productName>e+安行高速列车意外伤害保险</productName>
+		<productImpagePath>/icbc/investmentlinked/images/img04.jpg</productImpagePath>
+		<productPrice>0.8</productPrice>
+		<productDepict>让您用小支出换来大保障，一次购买即可拥有365日周全保障，享尽安心出行</productDepict>
+		<productLink></productLink>
+	</productFTA>
+	<productJEB>
+		<productCode>JEB</productCode>
+		<productName>盛世宝贝两全保险（分红型）</productName>
+		<productImpagePath>/icbc/investmentlinked/images/img05.jpg</productImpagePath>
+		<productPrice>1000</productPrice>
+		<productDepict>宝贝赢家两全保险（分红型），帮助智慧老爸老妈铺就宝贝成才之路...</productDepict>
+		<productLink></productLink>
+	</productJEB>
+	<productBSPG7>
+		<productCode>BSPG7</productCode>
+		<productName>如意宝二号两全保险（分红型）</productName>
+		<productImpagePath>/icbc/investmentlinked/images/img01.jpg</productImpagePath>
+		<productPrice>10,000</productPrice>
+		<productDepict>想要收益和保障的完美结合？如意宝来帮你您！如此完美的如意宝，你怎能不拥有...</productDepict>
+		<productLink></productLink>
+	</productBSPG7>
+	<productAA>
+		<productCode>AA</productCode>
+		<productName>e+安行航空意外伤害保险</productName>
+		<productImpagePath>/icbc/investmentlinked/images/img06.jpg</productImpagePath>
+		<productPrice>9</productPrice>
+		<productDepict>再美好的出行计划，也需要强有力的安全保障，一份保险则是您空中旅行时的必备的“降落伞”...</productDepict>
+		<productLink></productLink>
+	</productAA>
+</productInfo>

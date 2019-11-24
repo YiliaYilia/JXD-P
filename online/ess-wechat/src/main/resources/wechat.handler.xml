@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handlers>
+	<handler>
+		<name>type_text</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveTxtHandler</handlerclz>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>type_image</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveImgHandler</handlerclz>
+	</handler>
+	<handler>
+		<name>type_voice</name>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>type_video</name>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>type_news</name>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>type_location</name>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>type_link</name>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>event_subscribe</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveEventHandler</handlerclz>
+		
+	</handler>
+	<handler>
+		<name>event_unsubscribe</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveEventHandler</handlerclz>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>event_subscribe_qrscene</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveEventHandler</handlerclz>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>event_scan</name>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>event_location</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveEventHandler</handlerclz>
+		<!-- add your handler -->
+	</handler>
+	<handler>
+		<name>event_click</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveMenuEventHandler</handlerclz>
+	</handler>
+	<handler>
+		<name>event_view</name>
+		<handlerclz>cn.com.sinosoft.wechat.handler.RecieveMenuEventHandler</handlerclz>
+	</handler>
+	
+</handlers>

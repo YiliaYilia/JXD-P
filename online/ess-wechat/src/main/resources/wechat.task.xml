@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks>
+	<task>
+		<name>token</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APP_ID&secret=APP_SECRET]]></url>
+		<work>cn.com.sinosoft.wechat.work.TokenWork</work>
+		<instance>single</instance>
+	</task>
+	<task>
+		<name>jsApiTicket</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=ACCESS_TOKEN&type=jsapi]]></url>
+		<work>cn.com.sinosoft.wechat.work.JsApiTicketWork</work>
+		<instance>single</instance>
+	</task>
+	<task>
+		<name>getOpenId</name>
+		<class>cn.com.sinosoft.wechat.task.GetGrantedFansOpenIDTask</class>
+		<url><![CDATA[https://api.weixin.qq.com/sns/oauth2/access_token?appid=APP_ID&secret=APP_SECRET&code=CODE&grant_type=authorization_code]]></url>
+		<work>cn.com.sinosoft.wechat.work.FansOpenidWork</work>
+		<instance>multi</instance>
+	</task>
+	<task>
+		<name>fans</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.FansWork</work>
+		<instance>single</instance>
+	</task>
+	<task>
+		<name>fansinfo</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN]]></url>
+		<class>cn.com.sinosoft.wechat.task.FansInfoTask</class>
+		<work>cn.com.sinosoft.wechat.work.FansInfoWork</work>
+		<instance>multi</instance>
+	</task>
+	<task>
+		<name>newfansinfo</name>
+		<url><![CDATA[https://api.weixin.qq.com/sns/userinfo?access_token=OAUTH2_TOKEN&openid=OPENID&lang=zh_CN]]></url>
+		<class>cn.com.sinosoft.wechat.task.FansInfoTask</class>
+		<work>cn.com.sinosoft.wechat.work.NewFansInfoWork</work>
+		<instance>multi</instance>
+	</task>
+	<task>
+		<name>message</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.CustomerMessageWork</work>
+	</task>
+<!-- 	<task> -->
+<!-- 		<name>updatefile</name> -->
+<!-- 		<url><![CDATA[http://file.api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE]]></url> -->
+<!-- 		<class>cn.com.sinosoft.wechat.task.UpdateFileTask</class> -->
+<!-- 		<work>cn.com.sinosoft.wechat.work.UpdateFileWork</work> -->
+<!-- 		<instance>multi</instance> -->
+<!-- 	</task> -->
+	<task>
+		<name>weixinmenucreate</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.MenuCreateWork</work>
+	</task>
+	<task>
+		<name>weixinmenuget</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/menu/get?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.MenuGetWork</work>
+	</task>
+	<task>
+		<name>groupsget</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/groups/get?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.GroupsGetWork</work>
+	</task>
+	<task>
+		<name>groupscreate</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/groups/create?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.GroupsCreateWork</work>
+	</task>
+	<task>
+		<name>groupidforfans</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/groups/getid?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.GroupIdForFansWork</work>
+	</task>
+	<task>
+		<name>groupmodify</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/groups/update?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.GroupModifyWork</work>
+	</task>
+	<task>
+		<name>groupfansmodfiy</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/groups/members/update?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.GroupFansModifyWork</work>
+	</task>
+	<task>
+		<name>downloadfile</name>
+		<class>cn.com.sinosoft.wechat.task.DownloadFileTask</class>
+		<url><![CDATA[http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID]]></url>
+		<work>cn.com.sinosoft.wechat.work.DownloadFileWork</work>
+	</task>
+	<!--获取创建二维码ticket-->
+	<task>
+		<name>QRCode</name>		
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.QRCodeWork</work>		
+	</task>
+	<!-- 上传多媒体文件  支持图片，音频，视频-->
+	<task>
+		<name>uploadMedia</name>
+		<class>cn.com.sinosoft.wechat.task.UploadMediaTask</class>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE]]></url>
+		<work>cn.com.sinosoft.wechat.work.UploadMediaWork</work>
+	</task>
+	<!-- 模版消息-->
+	<task>
+		<name>templateMessage</name>
+		<url><![CDATA[https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN]]></url>
+		<work>cn.com.sinosoft.wechat.work.TemplateMessageWork</work>
+	</task>
+</tasks>

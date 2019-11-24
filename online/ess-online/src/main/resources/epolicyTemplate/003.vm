@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</meta>
+<title>电子保单</title>
+<style type="text/css">
+
+@page {
+	size:210mm 297mm;
+	margin-top:75px;
+	margin-bottom:50px;
+	background-image:url("back");
+	background-repeat: no-repeat;
+	background-position:left;
+	@top-center {content: element(header)}
+	@bottom-center {content: element(footer)}
+}
+.header {
+	position: running(header);
+	color:#cccccc;
+	padding-top:25pt;
+	padding-right:50px;
+}
+#toop{
+	margin-left:-48px;
+	width: 756px;
+}
+
+.footer { 
+	margin-bottom:10px;
+	padding-top:-30px;
+	position: running(footer) 
+}
+.pageNext{page-break-after: always;}   
+
+body {
+	margin: 0px;
+	page: WordSection1;
+	font-family: SimSun;
+}
+
+.top{
+	padding-top: 11px;
+}
+
+.title{
+	text-align: center;
+}
+
+.welcome{
+	font-size: 12px;
+	padding-left: 2px;
+	padding-top: 4px;
+}
+
+.td{
+	padding-left: 90px;
+}
+
+.tr{
+	height: 29px;
+}
+
+.cash{
+	width:756px;
+	font-size: 14px;
+	cellpadding:0px;
+	border: 0px;
+}
+
+.pour{
+	font-size: 16px;
+	font: bolder;
+}
+
+.table3{
+	align:center;
+}
+
+td{
+border:none;/*这个是单元格，不给他要边框*/
+}
+
+
+.line{
+	border-top: 1px solid #000000;
+	font-weight: bolder; 
+	color: #000000; 
+	width: 756px;
+}
+.line2{
+	border-bottom:1px solid #000000;
+	color: #000000; 
+	width: 756px;
+	line-height:35px;
+}
+b{font-family: SimHei;}
+strong{font-family: simhei}
+i{/*SimSun不倾斜不加粗(跟什么都不加效果一样/不加粗能识别中文)，
+	SimHei加粗不倾斜(能识别中文)，
+	simsun/simhei/sans-serif/Italic 加粗倾斜（不识别中文）*/
+	font-style:italic;
+	font-family: SimHei;
+}
+</style>
+</head>
+<body>
+
+	<!-- 页眉 -->
+	<div id="toop" class="header">
+		<img alt="" src="${top}" width="810px" height="50px"/>
+	</div>
+	<!-- 页脚 -->
+	<div  class="footer">
+		<div align="center" style="font-size:13px;padding-bottom: 5px;">第  1  页
+			#if($policy.areacode=="JSNJ0"||$policy.areacode=="ZJHZ0")（共  19  页）
+			#else（共  18  页）
+			#end
+		</div>
+		<img alt="" src="${botton}" width="700px"/>
+	</div>
+	
+	<div style="padding-left:20px;">
+		<div style="text-align: left;font-style:italic; font-style: oblique;">
+			<br /><br /><i><img alt="" src="${welcome}" width="190px" height="30px"/></i>
+		</div>
+			<br />
+			<br />
+			<br />
+			<div style="font-size: 15px;">
+			<div style="text-align: left; margin: 0 auto; ">
+			<div style="padding-left: 150px;">
+					<table border="0" width="400px" class="table3" align="center" style="font-size: 14px;table-layout: fixed;">
+					<tr style="height: 27px;"><td>
+						<table>
+							<tr>
+								<td align="left">保险合同编号：</td>
+								<td align="left">${policy.policycode}</td>
+							</tr>
+						</table>
+						
+					</td></tr>
+					<tr style="height: 27px;"><td style="word-wrap: break-word;word-break:break-all;">
+						<table>
+							<tr>
+								<td align="left">收件人：</td>
+								<td align="left">${policy.applicantname}</td>
+							</tr>
+						</table>
+					</td></tr>
+					<tr style="height: 81px;"><td valign="top">
+						<table>
+							<tr>
+								<td align="left" valign="top">地址：</td>
+								<td align="left" valign="top">
+									${address}
+								</td>
+							</tr>
+						</table>
+					</td></tr>
+				</table>
+			</div>
+				<br /><br/><br/>
+				<div>尊敬的客户<b style="font-size: 16px;">${policy.applicantname}</b>先生/女士：</div>
+				<div style="padding-left: 30px;" class="top">您好！感谢您选择工银安盛人寿保险有限公司为您提供保险保障！我们已将您的保险合同(编号</div>
+				
+				<div class="top">为<strong style="font-size: 16px;">${policy.policyno}</strong>)资料备妥，随附本专函中，敬请查核。</div>
+				
+					<div style="padding-left: 30px;" class="top">为了维护您的保险权益，我们提醒您仔细阅读以下<b>客户须知</b>。</div>
+					
+					<div style="padding-left: 30px;" class="top">如您有任何疑问、意见及建议，欢迎致电我公司全国统一客户服务电话 <strong style="border-bottom:1px solid #000;">400-670-5566</strong>，我们将</div>
+					
+					<div class="top">有专人竭诚为您提供各项咨询与服务，并充分听取您的意见及建议。</div>
+					
+					<div style="padding-left: 30px;" class="top">为您提供更好的服务，一直是我们努力的方向！</div>
+					
+				
+				<div style="padding-left: 30px;" class="top">顺祝 安康！</div>
+				<div style="padding-left: 440px;" class="top">工银安盛人寿保险有限公司敬启</div>
+				<div style="padding-left: 500px;" class="top">$!dateUtils.format($!policy.platforminvaliddate,"yyyy年M月d日")</div>
+				<br /><br /><br />
+				</div>
+				<div><b style="font-size: 16px;">客户须知：</b></div>
+
+				<div style="padding-top: 3px;font-size: 13px;">为了维护您的权益，以下事宜敬请注意：</div>
+				<div style="padding-top:3px;">
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;请您收到本保险合同后，检查合同是否齐全，仔细审阅合同内容（ 如您购买的险种、合同生效日等）及个人资料（如姓</div>
+					<div class="welcome" style="padding-left: 15px;">名、有效身份证件号码等）有无错漏。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;请您认真检查并确认保险合同中所载明的保险金额、保险期间、交费期限、保险费等正确无误，并符合您的需求。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;请您认真阅读合同中对保险合同生效日、保险责任、责任免除、合同解除、领取保险金等事项的说明，以及各种疾病和残</div>
+					<div class="welcome" style="padding-left: 15px;">疾程度的解释条款，全面了解合同内容。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;保险期间在一年以上的合同设有犹豫期，请您注意犹豫期内退保和犹豫期后退保的给付额，认真阅读现金价值表。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;请您认真阅读合同中对欠交保险费的处理条款，确保您授权我公司代扣保险费的银行账号有效并有足够金额，避免产生欠</div>
+					<div class="welcome" style="padding-left: 15px;">费，导致您的保险合同效力中止或终止。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;请您妥善保管保险合同、缴费发票以及相关的文件资料，如有遗失，请及时致电我公司办理补发事宜。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;如果您的联系地址和电话、个人信息等发生变化，或有其他任何疑问和需求，请及时联系我们。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;请您特别留意：凡向我公司递交的各类书面材料，都应有您本人的亲笔签名，且应与您保存在我公司的签名样本或投保单</div>
+					<div class="welcome" style="padding-left: 15px;">上的签名式样一致。</div>
+					<div class="welcome"><img alt="" src="${hands}" width="8px" height="3px"/>&nbsp;如为新型人身保险产品，其红利分配和投资收益都是不确定的，我们基于对未来收益的假设而做的演示，不能理解为对未</div>
+					<div class="welcome" style="padding-left: 15px;">来的预期。</div>
+					<br />
+					<table width="650px;">
+					<tr style="height: 13px;"><td  width="20%"></td>
+						<td width="20%"></td>
+						<td width="20%"></td>
+						<td align="right"><b style="font-size: 13px;">销售机构：工银安盛人寿保险有限公司</b></td></tr>
+					<tr style="height: 13px;"><td width="20%"></td>
+						<td width="20%"></td>
+						<td width="20%"></td>
+						<td align="right"><b style="font-size: 13px;">销售人员：工银安盛网销</b></td></tr>
+					</table>
+				</div>
+			</div>			
+		</div>
+	
+	
+	<div class="pageNext"></div>
+		<!-- 页眉 -->
+	<div id="toop" class="header">
+		<img alt="" src="${top}" width="810px" height="50px"/>
+	</div>
+	<!-- 页脚 -->
+	<div  class="footer" >
+		<div align="center" style="font-size:13px;">第  2  页
+			#if($policy.areacode=="JSNJ0"||$policy.areacode=="ZJHZ0")（共  19  页）
+			#else（共  18  页）
+			#end
+		</div>
+		<img style="padding-top: 5px;" alt="" src="${botton}" width="700px" />
+	</div>
+	<div>
+		<div class="title" >
+			<br /><br /><b style="font-size: 20px;">保   险   单</b>
+		</div>
+		<br/>
+<table style="width: 700x;font-size: 14px;" border="0" align="center">
+  <tr class="tr">
+    <td width="360px"></td>
+    <td style="padding-left: 200px">币值单位：人民币元</td>
+  </tr>
+  <tr class="tr">
+    <td colspan="2"><div class="line"><b>保险合同信息：</b></div></td>
+    <td></td>
+  </tr>
+  <tr class="tr">
+    <td>保险合同编号：${policy.policycode}</td>
+    <td class="td">保险计划：${CampName}</td>
+  </tr>
+  <tr class="tr">
+    <td>保险合同生效时间：$!dateUtils.format($!policy.platforminvaliddate,"yyyy年M月d日")24时起</td>
+    <td class="td">保险期间：终生</td>
+  </tr>
+  <tr class="tr">
+   #if($policy.paymentInfo.investment==1)
+     <td>交费方式：月缴</td>
+   #else
+     <td>交费方式：年缴</td>
+   #end
+    <td class="td">交费期间：5年</td>
+  </tr>
+  
+  <tr style="height: 30px;">
+    <td colspan="2"><div class="line"><b>投保人信息：</b></div></td>
+    <td></td>
+  </tr>
+  <tr class="tr">
+    <td>姓名：${applicant.name}</td>
+    <td class="td">证件号码：${applicant.carNumber}</td>
+  </tr>						   
+
+  <tr class="tr">
+    <td colspan="2"><div class="line"><b>被保险人信息：</b></div></td>
+    <td></td>
+  </tr>
+  <tr class="tr">
+    <td>姓名：${insurer.name}</td>
+    <td class="td">证件号码：${insurer.carNumber}</td>
+  </tr>
+  <tr class="tr">
+    <td>年龄：${insurer.age}周岁</td>
+    <td class="td">出生日期：$!dateUtils.format($!insurer.birthday,"yyyy年M月d日")</td>
+  </tr>
+  <tr class="tr"> #if($insurer.sex==1)
+    <td>性别：男</td>
+    #else
+    <td>性别：女</td>
+    #end
+    <td></td>
+  </tr>
+
+  <tr class="tr">
+    <td colspan="2"><div class="line"><b>身故受益人信息：</b></div></td>
+    <td></td>
+  </tr>
+  <tr class="tr">
+    <td>姓名：${name1}</td> <td class="td">姓名：${name2}</td>
+  </tr>
+  <tr>
+    <td>姓名：${name3}</td> <td class="td">姓名：${name4}</td>
+  </tr>
+  <tr class="tr">
+    <td colspan="2"><div class="line2">姓名：${name5}</div></td> 
+  </tr>
+</table>
+<br/><br/>
+
+<table width="1009" border="0" style="font-size: 14px;">
+  <tr>
+    <td width="411"><b>保险保障及保险费</b></td>
+    <td width="139">&nbsp;</td>
+    <td width="103">&nbsp;</td>
+    <td width="328">&nbsp;</td>
+    
+  </tr><br/>
+  
+  <tr class="tr">
+  
+    <td style="padding-left:100px"><b>保险项目/险种名称</b></td>
+    <td align="right"><b>基本保险金额</b></td>
+    <td align="right"><b>每期保险费</b></td>
+    <td>&nbsp;</td>
+    
+  </tr>
+  
+  <tr class="tr">
+    <td>工银安盛运筹帷幄终身寿险（投资连结型）</td>
+    <td align="right">￥${policy.sumamount}</td>
+    <td align="right">￥${policy.paymentInfo.premiumeach}</td>
+    <td>&nbsp;</td>
+  </tr>  <br/>
+  
+  <tr>
+    <td colspan="3" style="padding-left:105px;" align="right"><b>每期保险费合计：￥${sumpremium}</b></td>
+	<td></td>
+  </tr>
+  <tr><td colspan="4"><div class="line2" ></div></td></tr>
+</table>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br />
+		<table width="90%" align="center">
+	        <tr align="center"><td>
+	        <div style="border-top: 1px solid #000000;color: #000000; width: 200px">
+						公司章 </div></td>
+				<td style="padding-left:200px;"><div
+					style="border-top: 1px solid #000000;color: #000000;width: 200px">
+						总经理签章</div></td>
+			</tr>
+	    </table>   
+</div>
+	 
+</body>
+</html>

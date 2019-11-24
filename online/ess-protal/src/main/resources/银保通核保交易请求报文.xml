@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+   <Head>
+      <TranDate>20140212</TranDate>
+      <!--交易日期[yyyyMMdd]-->
+      <TranTime>074207</TranTime>
+      <!--交易时间[hhmmss]-->
+      <TranNo>5046111295</TranNo>
+      <!-- 交易流水号 -->
+      <ZoneNo>01105</ZoneNo>
+      <!--地区编码,城市级编码-->
+      <TranCom outcode="013">013</TranCom>
+      <!-- 交易单位(银行/农信社/经代公司),013电商平台-->
+      <BankCode>013</BankCode>
+      <!--银行代码 如：011工行，012广发,013电商平台-->
+      <FuncFlag>1013</FuncFlag>
+      <!-- 交易代码 -->
+      <TranSchnl>11</TranSchnl>
+      <!-- 渠道代码,11电商渠道 -->     
+   </Head>
+   <Body>
+      <ProposalPrtNo>2014021250461195</ProposalPrtNo>
+      <!-- 投保单(印刷)号 -->
+      <PolApplyDate>20140212</PolApplyDate>
+      <!-- 投保日期 -->
+      <GetPolMode>8</GetPolMode>
+      <!-- 保单递送方式 -->
+      <HealthNotice>N</HealthNotice>
+      <!-- 健康告知(N/Y)  -->      
+      <ContractEffDate>20140212</ContractEffDate>
+      <!--客户指定生效日期，若无指定请置空-->
+      <DisCount>6</DisCount>
+      <!--保费折扣，6折-->
+      <Referrer></Referrer>
+      <!--推荐人姓名/会员号/营销代码-->
+      <ReMobile></ReMobile>
+       <!--推荐人手机号-->
+      
+      <!-- 投保人 -->
+      <Appnt>
+         <Name>张慰春</Name>
+         <!-- 姓名 -->
+         <Sex>F</Sex>
+         <!-- 性别 -->
+         <Birthday>19630226</Birthday>
+         <!-- 出生日期(yyyyMMdd) -->
+         <IDType>0</IDType>
+         <!-- 证件类型 -->
+         <GovtTermDate />
+         <!--证件有效期-->
+         <IDNo>320402630226312</IDNo>
+         <!-- 证件号码 -->
+         <JobCode>1601001</JobCode>
+         <!-- 职业代码  核心默认值也代码为1601001-->
+         <Nationality>156</Nationality>
+         <!-- 国籍 -->
+         <EstSalary />
+         <!--投保人年均收入（单位：万）-->
+         <Stature />
+         <!-- 身高(cm)  空值-->
+         <Weight />
+         <!-- 体重(g)  空值-->
+         <MaritalStatus />
+         <!-- 婚否(N/Y) 空值-->
+         <Address>江苏省（市、区）常州市天宁区县（区）丽宝第花苑4丙601</Address>
+         <!-- 地址 -->
+         <ZipCode>213001</ZipCode>
+         <!-- 邮编 -->
+         <Mobile>13813663639</Mobile>
+         <!-- 移动电话 -->
+         <Phone />
+         <!-- 固定电话 -->
+         <Email>dinna.zhang@icbc-axa.cpm</Email>
+         <!-- 电子邮件-->
+         <RelaToInsured>8</RelaToInsured>
+         <!-- 与被保人关系 -->
+      </Appnt>
+      
+      <!-- 被保人 -->
+      <Insured>
+         <Name>张慰春</Name>
+         <!-- 姓名 -->
+         <Sex>F</Sex>
+         <!-- 性别 -->
+         <Birthday>19630226</Birthday>
+         <!-- 出生日期(yyyyMMdd) -->
+         <IDType>0</IDType>
+         <!-- 证件类型 -->
+         <GovtTermDate />
+         <!--证件有效日期-->
+         <IDNo>320402630226312</IDNo>
+         <!-- 证件号码 -->
+         <JobCode />
+         <!-- 职业代码 -->
+         <Nationality>156</Nationality>
+         <!-- 国籍 固定为CHN-->
+         <EstSalary />
+         <Stature />
+         <!-- 身高(cm)  空值-->
+         <Weight />
+         <!-- 体重(g)  空值-->
+         <MaritalStatus />
+         <!-- 婚否(N/Y) 空值-->
+         <Address>江苏省（市、区）常州市天宁区县（区）丽宝第花苑4丙601</Address>
+         <!-- 地址 -->
+         <ZipCode>213001</ZipCode>
+         <!-- 邮编 -->
+         <Mobile>13813663639</Mobile>
+         <!-- 移动电话 -->
+         <Phone />
+         <!-- 固定电话 -->
+         <Email>dinna.zhang@icbc-axa.cpm</Email>
+         <!-- 电子邮件-->
+      </Insured>
+      
+      <!-- 受益人(可多个) -->
+      <Bnf>
+         <Type>1</Type>
+         <!-- 受益人类别 -->
+         <Grade>1</Grade>
+         <!-- 受益顺序 -->
+         <Name>周宁</Name>
+         <!-- 姓名 如果为法定 Name默认为(法定)-->
+         <Sex>M</Sex>
+         <!-- 性别 -->
+         <Birthday>19890624</Birthday>
+         <!-- 出生日期(yyyyMMdd) -->
+         <IDType>0</IDType>
+         <!-- 证件类型 -->
+         <GovtTermDate />
+         <!--证件有效期-->
+         <IDNo>32040219890624311X</IDNo>
+          <!-- 证件号码 -->
+         <Lot>100</Lot>
+         <!-- 受益比例(整数，百分比) -->
+         <RelaToInsured>3</RelaToInsured>
+         <!-- 与被保人关系 -->
+         <BeneficType>N</BeneficType>
+         <!-- 受益人是否法定 -->
+      </Bnf>
+      
+      <!-- 险种(可多个) -->
+      <Risk>
+         <RiskCode>AA</RiskCode>
+         <!-- 险种代码 -->
+         <MainRiskCode>AA</MainRiskCode>
+         <!-- 主险险种代码 -->        
+         <Prem>2100</Prem>
+         <!-- 保险费(分) -->
+         <Mult>1</Mult>
+         <!-- 投保份数 -->
+         <Amnt>50000000</Amnt>
+         <!-- 保额(分) -->
+         <PayIntv>5</PayIntv>
+         <!-- 缴费频次 -->
+         <InsuYearFlag>4</InsuYearFlag>
+         <!-- 保险年期年龄标志 -->
+         <InsuYear>365</InsuYear>
+         <!-- 保险年期年龄 -->
+         <PayEndYearFlag>5</PayEndYearFlag>
+         <!-- 缴费年期年龄标志 -->
+         <PayEndYear>105</PayEndYear>
+         <!-- 缴费年期年龄 -->
+      </Risk>
+   </Body>
+</TranData>
+

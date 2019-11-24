@@ -1,0 +1,48 @@
+Hibernate注解关系映射  
+
+Hibernate Annotation关系映射的几种类型映射用法及使用方法（说明：以前实例的实体是user和role，主键分别是userid和roleid）
+
+ 1）一对一外键关联映射（单向）
+ @OneToOne(cascade=CascadeType.ALL)  //一对一外键关联，使用@OneToOne，并设置了级联操作
+ @JoinColumn(name="userid",unique=true)   //@JoinColum设置了外键的名称为userid（数据库字段名），如果不设置，则默认为另一类的属性名+ _id。外键的值是唯一的(unique)，不可重复，与另一类的主键一直
+ 
+ 2）一对一外键关联映射（双向）
+ @OneToOne(mappedBy=" role",cascade=CascadeType.ALL)  //一对一双向关联关系，使用@OneToOne。注意：需要加上mappedBy="role"，如果不加上的话， role 也会生成一个外键（user_id），mappedby="role"需要指向与他关联对象的一个属性，说明双向关联关系中，有且仅有一端是作为主体(owner)端存在的，主体端负责维护联接列，对于不需要维护这种关系的从表则通过mappedBy属性进行声明，mappedBy的值指向主体的关联属性
+ //规律：只有是双向关联关系，都加上mappedby，cascade=CascadeType.ALL级联
+
+  3)一对一主键关联映射（不重要）
+ 在实际中很少用，使用注解@PrimaryKeyJoinColumn，意思是说，我的主键去参考另外一张表中的主键，作为我的主键，但是在我测试使用注解一对一主键关联映射，在生成表的时候，数据库中并没有生成关联，使用XML映射可以生成。Annotation注解一对一主键关联映，有些bug。不过没空去研究它。因为在实际开发中一对一很少用。在实际开发中我机会没有用过，主键关联就更少了
+
+ 4）多对一关联映射
+ 多端配置
+ @ManyToOne(targetEntity=role.class)  //多对一注解@ManyToOne；targetEntity指定了关联对象
+ @JoinColumn(name="userid")  //@JoinColumn(name="userid")指定生产的外键的字段名，默认是org_id
+
+ 5)一对多关联映射（单向）
+ @OneToMany   //一对多注解@OneToMany（单向）,如果只写@OneToMany的话，hibernate会建一张中间表来维护他们之间的关系
+ @JoinColumn(name="roleid")    //加上@JoinColumn(name="roleid")，则不会建中间表，他会在多的一端加上外键roleid，来维护他们之间的关系
+
+ 6)一对多关联映射（双向）
+ 一端配置
+ @OneToMany(mappedBy="role")  //一对多双向，在一的一端中设置mappedBy,说明多的一端为主导
+ @JoinColumn(name="roleid")  //如果指定了外键字段名称，则多的一端也需要指定相同的字段名称
+ 
+ 多端配置
+ @ManyToOne  //一对多双向
+ @JoinColumn(name=" roleid ") //需要指定外键与一的一端给的外键名称一致，@JoinColumn(name=" roleid "),也可以不指定，如果在多的一端不指定，则一的一端也不能指定,否则为生成两个外键
+
+ 7)多对多关联映射（单向）
+ @ManyToMany  //多对多映射：注解@ManyToMany（单向），默认情况下，hibernate会自动的创建一张中间表来维护多对多关系
+
+  默认中间表的名称 ：user_role中间表，字段的名称user_id role_id,如果想更换表名和字段名称，注解如下：
+ @JoinTable(name="t_u_r",joinColumns={@JoinColumn(name="u_id")},inverseJoinColumns={@JoinColumn(name="r_id")})
+ 
+ 8)多对多关联映射（双向）
+ user端
+ @ManyToMany  //多对多映射：注解@ManyToMany（单向）;默认情况下，hibernate会自动的创建一张中间表，来维护多对多关系;默认中间表的名称 ：user_role中间表，字段的名称user_id role_id
+ 
+ 如果想更换表名和字段名称，注解如下：
+ @JoinTable(name="t_u_r",joinColumns={@JoinColumn(name="u_id")},inverseJoinColumns={@JoinColumn(name="r_id")})  //@JoinTable(name="t_u_r"),指定中间表的表名；joinColumns={@JoinColumn(name="u_id")},指定当前对象的外键；inverseJoinColumns={@JoinColumn(name="r_id")},指定关联对象的外键
+
+ role端
+ @ManyToMany(mappedBy="role")   //多对多,双向关联映射

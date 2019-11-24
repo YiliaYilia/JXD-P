@@ -1,0 +1,81 @@
+		html,body{
+			font-family:"微软雅黑";
+			font-size:1.05em;
+			line-height: 2em;
+		}
+		.banner img {
+			width: 100%;
+			height: 300px;
+		}	
+		/*服务主页*/
+		.row img {
+			width: 62px;
+			height: 62px;
+			margin-top: 30px;
+			margin-bottom: 5px;
+			display: block;
+		}
+		.row {
+			margin:25px 5px 100px 5px;
+		}
+		.row>div {
+			text-align: center;
+		}
+		a>span {
+			color: #666;
+			font-size: 0.85em;
+		}
+		a {
+			text-decoration: none;
+		}
+		/*服务详情*/
+		.main {
+			text-align: justify;
+		}		
+		h3 {	
+		    font-size: 1.5em;
+		    text-align: center;
+		    background-color: #0069D9;	  
+		 	color: #f8f9fa; 
+		 	height: 50px;
+		 	line-height: 50px; 	
+		}
+		dl {
+			margin-bottom: 50px;
+			padding-left: 1em;
+			padding-right: 1em;
+			color: #333;			
+		}
+		.doc-content dl {
+			padding: 0;
+		}
+		.detail {
+			min-height: 650px;	
+		}
+		#telDoctor dl dd ul {
+			padding-left: 20px;
+		}
+		.content ol{
+			padding-left: 20px;
+		}
+		#telUrl {
+			margin-top: 30px;
+		}
+		#healthTab {
+			margin-top: 1em;
+        	margin-bottom: 1em;
+        }
+        .nav-link {
+		    padding: .2rem .5rem;
+		}
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+        .sticky + .content {
+        	padding-top: 50px;
+        }
+        .breadcrumb {
+        	display: none;
+        }

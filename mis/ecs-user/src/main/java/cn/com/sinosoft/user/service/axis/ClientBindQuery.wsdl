@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://webservices.sinosoft.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax225="http://model.webservices.sinosoft.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://webservices.sinosoft.com">
+    <wsdl:documentation>ClientBindQuery</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://model.webservices.sinosoft.com/xsd">
+            <xs:complexType name="ClientBindModel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="birthDate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="code" type="xs:int"/>
+                    <xs:element minOccurs="0" name="contactAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="contactNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="contenct" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="flag" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="idNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="idType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="partyCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="partyName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="postalcode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax226="http://model.webservices.sinosoft.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservices.sinosoft.com">
+            <xs:import namespace="http://model.webservices.sinosoft.com/xsd"/>
+            <xs:element name="getClientBindDetail">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="idType" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="idNo" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="clientName" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getClientBindDetailResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax225:ClientBindModel"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getClientBindDetailRequest">
+        <wsdl:part name="parameters" element="ns:getClientBindDetail"/>
+    </wsdl:message>
+    <wsdl:message name="getClientBindDetailResponse">
+        <wsdl:part name="parameters" element="ns:getClientBindDetailResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="ClientBindQueryPortType">
+        <wsdl:operation name="getClientBindDetail">
+            <wsdl:input message="ns:getClientBindDetailRequest" wsaw:Action="urn:getClientBindDetail"/>
+            <wsdl:output message="ns:getClientBindDetailResponse" wsaw:Action="urn:getClientBindDetailResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ClientBindQuerySoap11Binding" type="ns:ClientBindQueryPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getClientBindDetail">
+            <soap:operation soapAction="urn:getClientBindDetail" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ClientBindQuerySoap12Binding" type="ns:ClientBindQueryPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getClientBindDetail">
+            <soap12:operation soapAction="urn:getClientBindDetail" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ClientBindQueryHttpBinding" type="ns:ClientBindQueryPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="getClientBindDetail">
+            <http:operation location="getClientBindDetail"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ClientBindQuery">
+        <wsdl:port name="ClientBindQueryHttpSoap11Endpoint" binding="ns:ClientBindQuerySoap11Binding">
+            <soap:address location="http://10.46.70.19:8080/peri/services/ClientBindQuery.ClientBindQueryHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="ClientBindQueryHttpSoap12Endpoint" binding="ns:ClientBindQuerySoap12Binding">
+            <soap12:address location="http://10.46.70.19:8080/peri/services/ClientBindQuery.ClientBindQueryHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="ClientBindQueryHttpEndpoint" binding="ns:ClientBindQueryHttpBinding">
+            <http:address location="http://10.46.70.19:8080/peri/services/ClientBindQuery.ClientBindQueryHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

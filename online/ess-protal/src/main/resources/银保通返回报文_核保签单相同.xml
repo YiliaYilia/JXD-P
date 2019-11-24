@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+   <Head>
+      <Flag>0</Flag>
+      <!--交易结果代码,0成功，1失败-->
+      <Desc>交易成功！</Desc>
+      <!--交易结果描述-->
+   </Head>
+   <Body>
+      <TransChnl>0</TransChnl>
+      <!--交易渠道 0：柜面 1：网销 8：自助终端 10：个人营销，11电商渠道-->
+      <ContNo>101-1257266</ContNo>
+      <!--保单号-->
+      <TransNo>0000000000008337</TransNo>
+      <!--交易流水号-->
+      <ProposalPrtNo>10030000000000004406</ProposalPrtNo>
+      <!-- 投保单(印刷)号 -->
+      <TellerNo>00001</TellerNo>
+      <!--柜员号-->
+      <BankManagerCode />
+      <!--营销人员代码-->
+      <BankManagerName />
+      <!--营销人员姓名-->
+      <AgentManageCode />
+      <Prem>7572480</Prem>
+      <!-- 总保费(分) -->
+      <FirstAddPrem>0</FirstAddPrem>
+      <!--首期追加保费(分)-->
+      <PremText>柒万伍仟柒佰贰拾肆元捌角整</PremText>
+      <!-- 总保费大写 -->
+      <Amnt>8000000</Amnt>
+      <!--总保额，单位分-->
+      <AmntText>捌万元整</AmntText>
+      <!--总保额大写 -->
+      <RenewalPermit />
+      <!--自动续保标志-->
+      <BankAccNo>01234567890124</BankAccNo>
+      <!--银行帐号-->
+      <GetIntv>10</GetIntv>
+      <!--生存金领取方式-->
+      <PayOutStart>65</PayOutStart>
+      <!--年金领取起始年龄-->
+      <AutoPayFlag />
+      <!--自动垫交标志-->
+      <AXAAgentCode>419012-03-055455</AXAAgentCode>
+      <!--FA编码-->
+      <AgentCode>055455</AgentCode>
+      <!-- 代理人编码 -->
+      <AgentName>BJFA中资</AgentName>
+      <!-- 代理人姓名 -->
+      <AgentGrpCode />
+      <!-- 代理人组别编码 -->
+      <AgentGrpName />
+      <!-- 代理人组别 -->
+      <AgentCom>057186</AgentCom>
+      <!-- 代理机构编码 -->
+      <AgentComName>工商银行-北京新华分理处</AgentComName>
+      <!-- 代理机构名称 -->
+      <ZoneNo>00200</ZoneNo>
+      <!--地区代码-->
+      <NodeNo>00002</NodeNo>
+      <!--网点代码-->
+      <TellerFlag />
+      <!--柜员资质开关-->
+      <TellerName />
+      <!--柜员姓名-->
+      <ComCode>860201510</ComCode>
+      <!-- 承保公司编码 -->
+      <ComLocation />
+      <!-- 承保公司地址 -->
+      <ComName>北京分公司</ComName>
+      <!-- 承保公司名称 -->
+      <ComZipCode>010</ComZipCode>
+      <!-- 承保公司邮编 -->
+      <ComPhone>8</ComPhone>
+      <!-- 承保公司电话 -->
+      <AccTimeFlag />
+      <!--投资日期标志 -->
+      <ContractNo />
+      <!--贷款合同号 -->
+      <LoanAccountNo />
+      <!--贷款账号-->
+      <LoanProductCode />
+      <!--贷款产品代码-->
+      <LoanAmount>0</LoanAmount>
+      <!--借款金额-->
+      <LoanStartDate />
+      <!-- 贷款起始日期-->
+      <LoanEndDate />
+      <!--贷款到期日期-->
+      <ContractEffDate />
+      <!--保险合同生效日期-->
+      <ContractEndDate />
+      <!--保险合同到期日期-->
+      <HighPremFlag />
+      <!--是否大额单-->
+      <TellCode>001、002、003、004、005、006</TellCode>
+      <!--被保人健康告知号节点-->
+      <TellText />
+      <!--被保人健康告知具体内容-->
+      <AppTellCode>001、002、003、004、005、006</AppTellCode>
+      <!--投保人健康告知号节点-->
+      <AppTellText />
+      <!--投保人健康告知具体内容-->
+      <AppComFlag>N</AppComFlag>
+      <!--投保人常规告知号节点-->
+      <AppCom />
+      <!--投保人常规告知具体内容-->
+      <InsuComFlag>N</InsuComFlag>
+      <!--被保人常规告知号节点 -->
+      <InsuCom />
+      <!--被保人常规告知具体内容 -->
+      
+      <!-- 投保人 -->
+      <Appnt>
+         <CustomerNo>10000000000000982950</CustomerNo>
+         <!-- 客户号 -->
+         <Name>投保人3</Name>
+         <!-- 姓名 -->
+         <Sex>M</Sex>
+         <!-- 性别 -->
+         <Birthday>19710202</Birthday>
+         <!-- 出生日期(yyyyMMdd) -->
+         <IDType>4</IDType>
+         <!-- 证件类型 -->
+         <IDNo>110101198</IDNo>
+          <!-- 证件号码 -->
+         <GovtTermDate>20200917 00:00:00.0</GovtTermDate>
+         <!--证件有效期-->
+         <JobType>1</JobType>
+         <!-- 职业类别 -->
+         <JobCode>1601001</JobCode>
+         <!-- 职业代码 -->
+         <Nationality>156</Nationality>
+         <!-- 国籍-->
+         <Stature />
+         <!-- 身高(cm) -->
+         <Weight />
+         <!-- 体重(g) -->
+         <MaritalStatus />
+         <!-- 婚否(N/Y) -->
+         <Dist />
+         <!-- 省-->
+         <City />
+         <!--市 -->
+         <Address>北京市东城区</Address>
+         <!-- 地址 -->
+         <ZipCode>666666</ZipCode>
+         <!-- 邮编 -->
+         <Mobile>15832576967</Mobile>
+         <!-- 移动电话 -->
+         <Phone>02223338551</Phone>
+         <!-- 固定电话 -->
+         <Email>erwa@163.com</Email>
+         <!-- 电子邮件-->
+         <RelaToInsured>8</RelaToInsured>
+         <!-- 与被保人关系 -->
+         <Salary>5.0</Salary>
+         <!--年薪，单位万元-->
+      </Appnt>
+      
+      <!--被保人-->
+      <Insured>
+         <CustomerNo>10000000000000982950</CustomerNo>
+         <!-- 客户号 -->
+         <Name>投保人3</Name>
+          <!-- 姓名 -->
+         <Sex>M</Sex>
+         <!-- 性别 -->
+         <Birthday>19710202</Birthday>
+         <!-- 出生日期(yyyyMMdd) -->
+         <IDType>4</IDType>
+         <!-- 证件类型 -->
+         <IDNo>110101198</IDNo>
+          <!-- 证件号码 -->
+         <GovtTermDate>20200917 00:00:00.0</GovtTermDate>
+         <!--证件有效期-->
+         <JobType>1</JobType>
+         <!-- 职业类别 -->
+         <JobCode />
+         <!-- 职业代码 -->
+         <Stature />
+          <!-- 身高(cm) -->
+         <Nationality>156</Nationality>
+         <!-- 国籍-->
+         <Dist />
+         <!-- 省-->
+         <City />
+          <!--市 -->
+         <Weight />
+         <!-- 体重(g) -->
+         <MaritalStatus />
+         <!-- 婚否(N/Y) -->
+         <Address>北京市东城区</Address>
+          <!-- 地址 -->
+         <ZipCode>666666</ZipCode>
+         <!-- 邮编 -->
+         <Mobile>15832576967</Mobile>
+          <!-- 移动电话 -->
+         <Phone>02223338551</Phone>
+         <!-- 固定电话 -->
+         <Email>erwa@163.com</Email>
+         <!-- 电子邮件-->
+         <InsuredAge>43</InsuredAge>
+         <!--被保人年龄-->
+         <Salary>5.0</Salary>
+         <!--年薪，单位万元-->
+      </Insured>
+      
+       <!-- 受益人(可多个) -->
+      <Bnf>
+         <BnfNo>1</BnfNo>
+         <Type>1</Type>
+         <!-- 受益人类别 -->
+         <Grade>1</Grade>
+         <!-- 受益顺序 -->
+         <Name>王五</Name>
+         <!-- 姓名 -->
+         <Birthday>19850917</Birthday>
+         <!-- 出生日期(yyyyMMdd) -->
+         <Sex>M</Sex>
+         <!-- 性别 -->
+         <IDType>0</IDType>
+         <!-- 证件类型 -->
+         <IDNo>220523850917341</IDNo>
+         <!-- 证件号码 -->
+         <GovtTermDate>20200917 00:00:00.0</GovtTermDate>
+         <!--证件有效期-->
+         <RelaToInsured>2</RelaToInsured>
+         <!-- 与被保人关系 -->
+         <Lot>100</Lot>
+         <!-- 受益比例(整数，百分比)  -->
+      </Bnf>
+      
+      <!-- 险种(可多个) -->
+      <Risk>
+         <RiskCode>HDA</RiskCode>
+         <!-- 险种代码 -->
+         <RiskName>工银安盛人寿尊享晚年年金保险</RiskName>
+         <!-- 险种名称 -->
+         <MainRiskCode>HDA</MainRiskCode>
+         <!-- 主险代码 -->
+         <TranRiskCode>023</TranRiskCode>
+         <!--险种编码-->
+         <PolApplyDate>20140211</PolApplyDate>
+         <!-- 投保日期(yyyyMMdd) -->
+         <SignDate>20140211</SignDate>
+         <!-- 承保日期(yyyyMMdd) -->
+         <CValiDate>20140211</CValiDate>
+         <!--起保日期(yyyyMMdd) -->
+         <InsuEndDate>20710211</InsuEndDate>
+         <!-- 保险责任终止日期 -->
+         <Amnt>8000000</Amnt>
+         <!-- 保额(分) -->
+         <Prem>7572480</Prem>
+         <!-- 保险费(分) -->
+         <Mult>1</Mult>
+         <!-- 投保份数 -->
+         <PayIntv>5</PayIntv>
+         <!-- 缴费频次 -->
+         <PayMode />
+         <!-- 缴费形式 -->
+         <InsuYearFlag>1</InsuYearFlag>
+         <!-- 保险年龄年期标志 -->
+         <InsuYear>100</InsuYear>
+         <!-- 保险年龄年期 -->
+         <PayEndYearFlag>5</PayEndYearFlag>
+         <!-- 缴费年期类型 -->
+         <PayEndYear>105</PayEndYear>
+         <!-- 缴费年期 -->
+         <PayEndDate>21190210</PayEndDate>
+         <!-- 终缴日期 -->
+         <CostIntv />
+         <!-- 扣款间隔 -->
+         <CostDate />
+         <!-- 扣款时间 -->
+         <PayToDate />
+         <!-- 交至日期(yyyyMMdd) -->
+         <GetYearFlag />
+         <!-- 领取年龄年期标志 -->
+         <GetStartDate>20370211</GetStartDate>
+         <!-- 起领日期(yyyyMMdd) -->
+         <GetYear />
+         <!-- 领取年龄 -->
+         <GetIntv />
+          <!-- 领取方式 -->
+         <GetBankCode />
+          <!-- 领取银行编码 -->
+         <GetBankAccNo />
+         <!-- 领取银行账户 -->
+         <GetAccName />
+         <!-- 领取银行户名 -->
+         <AutoPayFlag />
+         <!-- 自动垫交标志 -->
+         <BonusGetMode />
+         <!-- 红利领取方式 -->
+         <SubFlag />
+          <!-- 减额交清标志 -->
+         <FullBonusGetMode />
+         <!-- 满期领取金领取方式 -->
+         
+          <!-- 账户信息 -->
+         <AccountList />
+         <CashValues>
+            <CashValue>
+               <EndYear>1</EndYear>
+               <!-- 年度 -->
+               <Cash>4040000</Cash>
+               <!-- 现金价值，单位分-->
+            </CashValue>
+            <CashValue>
+               <EndYear>2</EndYear>
+               <Cash>4280000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>3</EndYear>
+               <Cash>4536000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>4</EndYear>
+               <Cash>4808000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>5</EndYear>
+               <Cash>5096000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>6</EndYear>
+               <Cash>5400000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>7</EndYear>
+               <Cash>5720000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>8</EndYear>
+               <Cash>6064000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>9</EndYear>
+               <Cash>6424000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>10</EndYear>
+               <Cash>6816000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>11</EndYear>
+               <Cash>7224000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>12</EndYear>
+               <Cash>7656000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>13</EndYear>
+               <Cash>8120000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>14</EndYear>
+               <Cash>8608000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>15</EndYear>
+               <Cash>9128000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>16</EndYear>
+               <Cash>9680000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>17</EndYear>
+               <Cash>10256000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>18</EndYear>
+               <Cash>10880000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>19</EndYear>
+               <Cash>11536000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>20</EndYear>
+               <Cash>12232000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>21</EndYear>
+               <Cash>12968000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>22</EndYear>
+               <Cash>13744000</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>23</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>24</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>25</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>26</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>27</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>28</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>29</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>30</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>31</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>32</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>33</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>34</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>35</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>36</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>37</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>38</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>39</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>40</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>41</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>42</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>43</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>44</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>45</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>46</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>47</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>48</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>49</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>50</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>51</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>52</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>53</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>54</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>55</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>56</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+            <CashValue>
+               <EndYear>57</EndYear>
+               <Cash>0</Cash>
+            </CashValue>
+         </CashValues>
+         <SpecContent />
+         <!-- 特别约定 -->
+      </Risk>
+   </Body>
+</TranData>
+

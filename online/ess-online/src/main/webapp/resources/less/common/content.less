@@ -1,0 +1,20 @@
+.content{
+	@media (max-width: @screen-sm-min){
+		height:100%;
+		-webkit-overflow-scrolling:touch;
+		overflow:auto;
+		padding-top:@head-height;
+	}
+}
+@media (max-width: @screen-sm-min){
+	.product,.quote{
+		.content{
+			padding-bottom:@btn-height-insure;
+		}
+	}
+	.insure,.confirm{
+		.content{
+			padding-bottom:@btn-height-insure*2 + 22px;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+.wkb{width: 100%;}
+/*header*/
+.wkb header{background: #5b8de1;}
+.wkb_title{background: #9bb5e0;width: 100%;line-height: 30px;margin: 20px auto;color: #fff;text-align: center;}}
+
+/*btn*/
+.wkb .btn_wrap .min_btn{background: #5b8de1;}
+.wkb .btn_wrap .one_btn{background: #5b8de1;}
+
+/*div*/
+.radio_div{width: 90%;margin: 20px 2%;line-height: 20px;}
+.radio_div input[type='radio']{display:none;}
+.radio_div .checked_img{width:15px;height:15px;border-radius:7px;float:left;margin:2px 5px 0;border:1px solid #656565;}
+.radio_div .current_radio{background: #656565;}
+
+

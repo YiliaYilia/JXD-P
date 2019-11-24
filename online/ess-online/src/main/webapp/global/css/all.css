@@ -1,0 +1,163 @@
+@CHARSET "GBK";
+/*list and hide show information*/
+.contenttitlediv{width:100%;height:54px;margin:50px auto 0 auto;}
+.titlepoint{width:15px;height:15px;border-radius:12px;background: #959595;float:left;margin:22px 15px 0px 15px;}
+.contenttitle{text-indent: 40px;float:left;line-height:54px;font-size:24px;}
+.linkline{width:5px;height:17px;background:#dcdcdc;margin:-17px 20px 0 20px;}
+.listtop{width:100%;height:84px;border-bottom:2px solid #a0a0a0;background: #eee;padding-top:12px;padding-bottom:12px;}
+.listtop .topbtn{width:60%;height:80px;margin:auto 4% auto 20%;background: #fff;border:2px solid #a0a0a0;border-radius:45px;
+text-align: center;float:left;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.listtop .topbtn span{width:47%;height:100%;line-height:80px;float:left;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.listtop .topbtn .currentspan{width:53%;background:#dd0024;color:#fff;border-radius:45px;}
+.listtop .toptip{width:14%;float:right;background: #ddd;height:108px;text-align:center;font-size:24px;line-height:50px;
+border-left:2px solid #a0a0a0;margin-top:-12px;border-top:2px solid #dd0024;}
+.showlinkline{width:5px;height:502px;background:#dcdcdc;margin:0 20px;text-decoration: none;}
+.hidelinkline{width:5px;height:194px;background:#dcdcdc;margin:0 20px;text-decoration: none;}
+.lastlinkline{width:5px;height:100px;background:#dcdcdc;margin:0 20px;text-decoration: none;}
+.showdiv{width:100%;height:540px;}
+.signdiv{width:10%;float:left;margin-top:70px;}
+.signdiv1{width:5%;float:left;margin-top:70px;}
+.signimg{width:45px;height:45px;background:#027e64;border-radius:50px;float:left;}
+.signimg img{width:25px;margin:10px;}
+.signarrow{ width:0;height:0;
+border-top:20px solid transparent; border-bottom:20px solid transparent;border-right:20px solid #dcdcdc;float:right;}
+.showtable{width:84%;margin:20px 0;float:left;border:1px solid #dcdcdc;border-radius:25px;font-size:20px;}
+.showtable .firstdiv{height:152px;background: #fffbc7;float:left;border-top-left-radius:25px;border-bottom:5px dashed #dcdcdc;font-size:20px;}
+.showtable .firstdiv div{text-indent: 25px;height:40px;margin-top:30px;}
+.showtable .seconddivshow{height:152px;background: #eee;float:left;border-top-right-radius:25px;border-bottom:5px dashed #dcdcdc;cursor:pointer;}
+.showtable .seconddivshow .showbtn{width:60px;height:14px;background: #959595;margin:70px auto auto auto;}
+.showtable .seconddivhide{display:none;}
+.showtable .thriddiv{height:303px;background: #fffbc7;float:left;border-bottom-left-radius:25px;}
+.showtable .thriddiv table{margin:0 0 0 15px;height:303px;font-size:16px;width:90%}
+.showtable .thriddiv table .firsttd{text-align:right;padding-right:10px;width:40%;}
+.showtable .forthdiv{height:253px; padding-top:50px;background: #027e64;float:left;border-bottom-right-radius:25px;}
+.showtable .forthdiv img{margin:90px auto 5px auto;display:block;}
+.showtable .forthdiv div{text-align: center;color:#fff;}
+.hidetable{width:84%;height:152px;margin:20px 0;float:left;border:1px solid #dcdcdc;border-radius:25px;font-size:20px;}
+.hidetable .firstdiv{background: #fff;float:left;border-top-left-radius:25px;border-bottom-left-radius:25px;font-size:20px;}
+.hidetable .firstdiv div{text-indent: 25px;line-height: 50px;}
+.hidetable .seconddivhide{height:152px;background: #eee;float:left;border-top-right-radius:25px;border-bottom-right-radius:25px;cursor:pointer;}
+.hidetable .seconddivhide .hidebtn{width:60px;height:60px;margin:50px auto;}
+.hidetable .seconddivhide .hidebtn .hidespan1{width:60px;height:14px;background:#959595;position: absolute;margin:23px auto;}
+.hidetable .seconddivhide .hidebtn .hidespan2{width:14px;height:60px;background:#959595;position: absolute;margin:auto 23px;}
+.hidetable .seconddivhide .seconddivshow{display:none;}
+.hidetable .thriddiv{display: none;}
+.hidetable .forthdiv{display: none;}
+/*fill information table*/
+.empty{width:100%;height:50px;}
+.filltable{width:100%;border-top:2px dashed #bfbfbf;border-bottom:2px dashed #bfbfbf;background: #fff;color:#000;}
+.filltable .tiptr{border-bottom:2px dashed #bfbfbf;height:34px;font-size:16px;color:#959595;}
+.commoninput{text-indent:10px;border-radius:10px;height:50px;width:90%;border:2px solid #bfbfbf;color:#bfbfbf;font-size:20px;}
+.shortinput{text-indent:10px;border-radius:10px;height:50px;width:90%;border:2px solid #bfbfbf;color:#bfbfbf;font-size:20px;}
+.codediv{height:50px;width:95%;border:2px solid #bfbfbf;color:#000;background: #eee;font-size:20px;line-height:50px;text-align: center;
+-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.filltable .firsttd{width:25%;text-align: right;height:80px;padding-right:2%;}
+.onebtn{width:80%;height:50px;margin:30px auto;background: #dd0024;border-radius:10px;color:#fff;text-align: center;line-height:50px;
+-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.resultdiv{width:90%;height:100px;border-top:2px dashed #bfbfbf;border-bottom:2px dashed #bfbfbf;background:#fffbc7;
+margin:70px auto 20px auto;color:#000;line-height:100px;}
+.resultdiv img{margin:21px;float:left;width:58px;height:58px;padding-right:21px;border-right:1px solid #bfbfbf;}
+.authenticationinfo{margin:20px auto;color:#404040;font-size:16px;}
+.hearttip{width:92%;background: #f5f5f5;border-top:2px dashed #bfbfbf;border-bottom:2px dashed #bfbfbf;padding:20px 4%;margin:50px 0;}
+.hearttip > div{width:90%;margin:auto;}
+.hearttip > div img{float:left;margin:2px 15px;}
+.hearttip > div >div{color:#404040;font-size:16px;float:left;width:85%;}
+/*productlist*/
+.productlisttop{width:100%;height:80px;}
+.productlisttop .firsttop{width:18%;height:80px;background: #dd0024;float:left;}
+.productlisttop .firsttop img{width:74px;height:54px;margin:13px 20%;}
+.productlisttop .secondtop{width:82%;height:80px;background:#f35652;color:#fff;line-height:80px;text-indent:20px;float:left;font-size:24px;}
+.productlist{width:100%;margin:30px auto;}
+.products{width:100%;background: #eee;height:190px;margin-bottom:30px;}
+.products .productimg{width:38%;height:100%;float:left;}
+.products img{width:100%;height:100%;max-height:190px;max-width:245px;float:right;}
+.products .productinfo{width:60%;height:100%;float:left;margin:0 0 0 2%;}
+.products .productinfo .producttitle{background: #eee;height:65px;font-size:24px;margin-top:5px;}
+.products .productinfo .infotable{background: #fff;font-size:16px;width:100%;height:110px;margin-bottom: 10px;}
+.products .productinfo table{width:98%;height:110px;margin:auto;}
+.seebtn{width:140px;height:45px;border-radius:25px;font-size:24px;background:#dd0024;color:#fff;text-align: center;line-height: 45px;
+-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.productarrow{ width:0;height:0;margin-top:20px;
+border-top:15px solid transparent; border-bottom:15px solid transparent;border-right:15px solid #eee;float:right;}
+/*tablehead*/
+.content .tablehead{margin-top: 25px;}
+.content .tablehead .borderleft{width: 1%;height: 90px;background:#027e64;float: left;}
+.content .tablehead .borderright{width: 99%;height: 90px;background:#eeeeee;border-top-right-radius:15px;float:left;}
+.content .tablehead .borderright .titleimgdiv{height: 90px;float:left;}
+.content .tablehead .borderright .titleimgdiv .titleimg{margin: 25% 25px 0 25px;}
+.content .tablehead .borderright .titlecontent{float:left;margin: 30px 50px;}
+/*tablehead have a fillet img*/
+.content .tablehead .filletright{width: 100%;height: 90px;background:#eeeeee;border-top-right-radius:15px;float:left;}
+.content .tablehead .filletright .titleimgdiv{height: 90px;float:left;}
+.content .tablehead .filletright .titleimg{margin: 25% 25px 0 25px;}
+.content .tablehead .filletright .titlecontent{float:left;margin: 30px auto;}
+/*fillet img*/
+.filletimg{width:45px;height:45px;line-height:45px;background:#cf1126;color:#ffffff;text-align:center;font-size:34px;float:left;
+border-top-left-radius:25px;border-top-right-radius:25px;border-bottom-left-radius:25px;border-bottom-right-radius:25px; }
+.radfilletimg{width:70px;height:70px;background:#cf1126;color:#ffffff;text-align:center;font-size:34px;float:left;
+border-top-left-radius:40px;border-top-right-radius:40px;border-bottom-left-radius:40px;border-bottom-right-radius:40px; }
+.whitefilletimg{width:70px;height:70px;background:white;color:#ffffff;text-align:center;font-size:34px;float:left;border-bottom-right-radius:45px; }
+/*table tablestyle and color*/
+.content .table{width: 100%;line-height: 100px;}
+.content .table .firstcolumn{color:#959595 ;text-indent: 5%;}
+.content .table .firstcolumn1{color:#959595 ;}
+.content .table .valuetable{color:#959595 ;text-align:center;width:33.33%}
+.content .table .investmentvaluetable{color:#959595 ;text-align:center;width:14.28%}
+.content .table .investmentvaluetable1{color:#959595 ;text-align:center;}
+.content .table .investmentsecondcolumn{color:#646464 ;text-align:center;}
+.content .table .secondcolumn{color:#646464;}
+.content .table .firstrow{color:#959595 ;text-indent: 10%;padding-top: 30px;}
+.content .table .secondrow{color:#646464;text-indent: 10%;padding-bottom: 20px;}
+.content .table .tableimg{line-height: 40px;width: 40px;height: 40px;float: right;margin:auto 30px;}
+.content .table .redbackground{height:100px;background: #dd0024;color: white;text-align: center;cursor: pointer;border-bottom-right-radius:15px;}
+.content .tablestyle{border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;border:1px solid #bfbfbf;}
+.content .notablestyle{border:1px solid #bfbfbf;border-bottom: none;}
+.content .graybackgroundtable{background: #eeeeee;border: none;border-top: 1px dashed #dcdbdc;}
+/*title*/
+.content .title{font-size: 24px;color: #959595;margin: 15px 5px;}
+/*table  tr td img span*/
+.container .tr td{border: 1px solid #dcdcdc;width: 25%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.container .tr td img{width: 80px;height: 80px;}
+.container .tr td .trdivimg{width:80px;height:80px;margin:30px auto auto auto;}
+.container .tr td .font{font-size: 14px;color: #484545;text-align: center;margin-bottom: 20px;}
+/*justonerowtable img font */
+.container .justonerowtable{border: 1px dashed #bfbfbf;width: 100%;background: #ffffff;border-left: none;border-right: none;}
+.container .justonerowtable .img{margin: 30px 5px 30px 10px;float: left;width: 155px;height: 155px;}
+.container .justonerowtable .font{line-height: 60px;margin: 50px auto;float: left;}
+.container .justonerowtable .dealwithstyle{float: right;margin-right: 10%;height:45px;}
+.container .justonerowtable .dealwithstyle .dealwithfont{float: left;line-height: 45px;text-indent: 15px;}
+.container .justonerowtable .dealwithstyle .editimg{float: left;width: 40px;height: 45px;}
+/*remind*/
+.insurancedetailremind{background: #fff9ad;width: 100%;color:#22292c;line-height: 58px;border-top:2px dashed #a0a0a0;
+border-bottom: 1px dashed #a0a0a0;margin-top: 30px;margin-bottom: 30px;font-size: 14px;}
+/*tip img*/
+.redtipimg{width: 40px;height: 40px;line-height: 40px;float: right;margin:auto 30px;}
+
+.fillSelect{float:left;height:43px;width:94%;color:#7c7c7c;font-size:20px;margin:7px auto auto auto;}
+.fillInput{float:left;height:42px;width:91%;color:#7c7c7c;font-size:20px;margin:7px auto auto auto;border:1px solid #bfbfbf;}
+.checkTrue{width:36px;height:36px;background: url("../images/checkboxred.png") no-repeat;float:left;margin:32px 12px;}
+.checkFalse{width:36px;height:36px;background: url("../images/checkboxred1.png") no-repeat;float:left;margin:32px 12px;}
+.radioTrue{width:36px;height:36px;background: url("../images/radiotrue.png") no-repeat;float:left;margin:32px 12px;}
+.radioFalse{width:36px;height:36px;background: url("../images/radiofalse.png") no-repeat;float:left;margin:32px 12px;}
+.worth_link{text-decoration: underline;color: #ed2d2e;font-weight: bold;text-indent: 5%}
+
+
+
+.hidetable .firstdiv1{background: #fff;float:left;border-top-left-radius:25px;border-bottom-left-radius:25px;font-size:22px;}
+.hidetable .firstdiv1 div{text-indent: 25px;line-height: 50px;}
+
+@media only screen and (max-width: 640px){
+	.container .justonerowtable .dealwithstyle{margin-right: 0;}
+	.container .justonerowtable .dealwithstyle .dealwithfont{text-indent: 0;}
+}
+
+
+@media only screen and (max-width: 540px){
+	.container .justonerowtable .img{width:125px;height:125px;}
+	.codediv{font-size:16px;}
+	.content .table .secondcolumn{font-size:18px;}
+	.content .table .valuetable{font-size:18px;}
+}
+@media only screen and (max-width: 484px){
+	.listtop .toptip{font-size:20px;}
+}

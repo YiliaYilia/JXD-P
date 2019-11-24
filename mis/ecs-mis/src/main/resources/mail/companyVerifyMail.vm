@@ -1,0 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+	<h3>亲爱的$!{loginMail}</h3>
+		您好 !
+		感谢您注册招商海达网 http://xxxx.com我们竭诚为您提供最专业的保险服务。
+		您的公司帐号已经激活。
+</body>
+
+</html>

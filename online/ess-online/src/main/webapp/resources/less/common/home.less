@@ -1,0 +1,109 @@
+//首页样式
+.home{
+	
+	&.wrap{
+		background:url(../../image/sales/sales-home-bg.png) left bottom no-repeat;
+			
+		&.quote{
+			background:url(../../image/reservation/reserv-home-bg.png) left bottom no-repeat;
+		}
+	}
+	
+	@media (max-width: @screen-sm-min){
+		&.wrap{
+			background:url(../../image/sales/sales-home-bg.png) -160px bottom no-repeat,
+				-webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.7, #fff), to(#ebffe8));
+				
+			&.quote{
+				background:url(../../image/reservation/reserv-home-bg.png) left bottom no-repeat,
+					-webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.7, #fff), to(#ebffe8));
+			}
+		}
+	}
+}
+
+.pt{
+	&-title{
+		height:65px;
+		line-height:65px;
+		font-size:20px;
+		color:#000;
+		background:#e5f0eb;
+	}
+	&-list{
+		padding-bottom:40px;
+	}
+	&-item{
+		text-align:center;
+		padding-top:28px;
+		@media (max-width: @screen-sm-min){
+			text-align:left;
+			height:190px;
+			border-bottom:2px solid #d7d7d7;
+			padding-top:54px;
+			padding-left:44px;
+		}
+		
+		img{
+			width:131px;
+			@media (max-width: @screen-sm-min){
+				float:left;
+				width:86px;
+			}
+		}
+	}
+	
+	&-detail{
+		@media (max-width: @screen-sm-min){
+			margin-left:25px;
+			display:inline-block;
+			width: 50%;
+		}
+		
+		p{
+			font-size:18px;
+			line-height:1.2em;
+			color:#717073;
+			padding-top:6px;
+			@media (max-width: @screen-sm-min){
+				padding-top:8px;
+				font-size:21px;
+			}
+		}
+		
+		.btn{
+			@media (max-width: @screen-sm-min){
+				float:right;
+				margin-right:32px;
+			}
+		}
+	}
+	
+	&-btn{
+		margin-top:15px;
+		@media (max-width: @screen-sm-min){
+			display:inline-block;
+			vertical-align:top;
+			margin-top:15px;
+		}
+	}
+	&-name{
+		color:@color-manulife;
+		line-height:1.3em;
+		font-size:24px;
+		padding-top:10px;
+		font-weight:bold;
+		
+		&.doubt{
+			@media (max-width: @screen-sm-min){
+				padding-top:0;
+				font-size:27px;
+			}
+		}
+		@media (max-width: @screen-sm-min){
+			font-size:27px;
+			font-weight:normal;
+			line-height:1em;
+		}
+	}
+}

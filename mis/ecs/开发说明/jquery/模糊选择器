@@ -1,0 +1,19 @@
+[属性名称] 匹配包含给定属性的元素
+[att=value] 匹配包含给定属性的元素 (大小写区分)
+[att*=value] 模糊匹配
+[att!=value] 不能是这个值
+[att$=value] 结尾是这个值
+[att^=value] 开头是这个值
+[att1][att2][att3]... 匹配多个属性条件中的一个
+
+===========================================下面举例================================
+
+                   <UL id=comparePro>
+                        <li id=compare_prod_list_001>信用卡贷款活动产品1-中国建设银行</li>
+                        <li id=compare_prod_list_002>信用卡贷款活动产品2-中国建设银行</li>
+                        <li id=compare_prod_list_003>信用卡贷款活动产品3-中国建设银行</li>
+
+                        <li id=other>其他</li>
+                    </UL>
+
+要取到所有 id以compare_prod_list_开头的<li>   ：  var list=$('li[id^=compare_prod_list_]');

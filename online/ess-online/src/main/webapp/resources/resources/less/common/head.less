@@ -1,0 +1,91 @@
+//页头样式
+.head{
+	
+	display:none;
+	
+	&.lg{
+		display:block;
+		height:75px;
+		background:url(../../image/common/head-bg.png) repeat-x left center;
+		
+	}
+	
+	&-logo{
+		text-align:left;
+		padding-top:16px;
+		
+		img{
+			margin-left:21px;
+		}
+	}
+	&-call{
+		text-align:right;
+		padding-top:24px;
+		
+		img{
+			margin-right:10px;
+		}
+	}
+	
+	
+	@media (max-width: @screen-sm-min){
+		
+		&.lg{
+			display:none;
+		}
+		
+		display:block;
+		height:@head-height;
+		top:0;
+		left:0;
+		background:@color-white;
+		z-index:100;
+		.fullwidth();
+		
+		&-name{
+			font-size:30px;
+			line-height:@head-height;
+			text-align:center;
+			color:@color-black;
+			font-weight:normal;
+			
+			&.red{
+				color:#c95404;
+			}
+		}
+		
+		&-icon{
+			position:absolute;
+			left:0;
+			top:0;
+			height:@head-height;
+			width:@head-height;
+			
+			&.home{
+				background:url(../../image/page/head-home.png) center no-repeat;
+			}
+			
+			&.back{
+				background:url(../../image/common/icon-back.png) center no-repeat;
+			}
+			
+			&.left{
+				left:0;
+			}
+			
+			&.right{
+				right:0;
+			}
+		}
+	}
+}
+
+.line{
+	&.head{
+		border-bottom:solid 5px @color-manulife;
+		
+		.head-name{
+			line-height:@head-height - 5px;
+		}
+	}
+}

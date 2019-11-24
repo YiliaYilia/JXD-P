@@ -1,0 +1,22 @@
+@CHARSET "GBK";
+.fillDiv{width:100%;background: #fff;margin-top:40px;border-top:1px dashed #bfbfbf;}
+.fillTable{margin-left:5%;width:95%}
+.fillTable thead tr td{border-bottom:1px solid #bfbfbf;height:95px;color:#1b1b1b;font-weight: bold;}
+.fillTable tbody tr td{border-bottom:1px dashed #bfbfbf;line-height:50px;}
+.fillTable select{width:100%;height:40px;-webkit-appearance:none;color:#959595;font-family: 'Microsoft YaHei';}
+.fillTable input{width:100%;height:40px;color:#959595;font-family: 'Microsoft YaHei';}
+.fillTable .alignRight{width:47%;text-align: left;padding-bottom:5px;padding-top:5px;}
+.fillTable img{width:20px;height:28px;}
+.fillDiv .tipDiv{width:88%;height:50px;color: #ff0202;padding-top:20px;padding-left:12%;border-bottom:1px dashed #bfbfbf;}
+.fillDiv img{width:30px;height:30px;}
+.fillDiv div{line-height:30px;height:30px;float:left;}
+.itemTable{width:85%;margin-left:12%;}
+.itemTable thead td{height:60px}
+.itemTable tbody td{line-height:40px;}
+.itemTable a{text-decoration: underline;color:#0f9bf3;}
+.checkBox{width:60%;height:30px;border:1px solid #535353;border-radius:5px;-webkit-appearance:checkbox;}
+select{border-style:none;outline:medium;outline: 0 none;background:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.lastDiv{height:100px;}
+.oneBtn{width:80%;margin:30px auto;height:65px;background: #027e64;border-radius:10px;color:#fff;text-align: center;line-height:65px;
+-webkit-tap-highlight-color:rgba(0,0,0,0);}
+

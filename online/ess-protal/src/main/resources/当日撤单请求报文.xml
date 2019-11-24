@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+   <Head>
+       <TranDate>20140213</TranDate>
+      <!--交易日期[yyyyMMdd]-->
+      <TranTime>152023</TranTime>
+       <!--交易时间[hhmmss]-->
+      <TranCom outcode="013">013</TranCom>
+      <!-- 交易单位(银行/农信社/经代公司),013电商平台-->
+      <BankCode>013</BankCode>
+      <!--银行代码 如：011工行，012广发，,013电商平台-->
+      <ZoneNo>102000</ZoneNo>
+      <!--地区编码，城市级代码-->
+      <TranNo>0000000000008343</TranNo>
+      <!-- 交易流水号 -->
+      <FuncFlag></FuncFlag>
+      <!-- 交易代码 -->
+      <TranSchnl>11</TranSchnl>
+      <!-- 渠道代码，11电商渠道 -->
+   </Head>
+   <Body>
+      <ContNo>301-1674938</ContNo>
+      <!--保单号-->     
+   </Body>
+</TranData>
+
+ 

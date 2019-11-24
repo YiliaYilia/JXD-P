@@ -1,0 +1,165 @@
+.confirm{
+	&.wrap{
+		background:#efefef;
+		@media (max-width: @screen-sm-min){
+			background:#fff;
+		}
+	}
+	&-panel{
+		
+		@media (max-width: @screen-sm-min){
+			margin-top:44px;
+			margin-left:42px;
+			margin-right:42px;
+			margin-bottom:42px;
+		}
+	}
+	
+	&-head{
+		
+		height:49px;
+		line-height:49px;
+		color:#fff;
+		background:@color-manulife;
+		font-size:16px;
+		text-align:center;
+		border-radius:5px 5px 0 0 ;
+		@media (max-width: @screen-sm-min){
+			height:64px;
+			line-height:64px;
+			font-size:34px;
+			border-radius:0;
+		}
+	}
+	
+	&-list{
+		
+		border-radius: 0 0 10px 10px;
+		border:2px solid #00693c;
+		box-shadow: 5px 5px 10px #CCC;
+		
+		@media (max-width: @screen-sm-min){
+			border:0;
+			box-shadow:none;
+			margin-top:20px;
+			border-radius:6px;
+			background:#f6f4eb;
+			padding-left:20px;
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		
+		li{
+			padding:10px 0;
+			padding-left:25px;
+			padding-right:42px;
+			.clearfix();
+			@media (max-width: @screen-sm-min){
+				padding:22px 0;
+			}
+			
+			&.even{
+				background:#f6f6f5;
+				@media (max-width: @screen-sm-min){
+					background:none;
+				}
+			}
+			
+			label,span{
+				font-size:14px;
+				line-height:32px;
+				float:left;
+				color:#000;
+				@media (max-width: @screen-sm-min){
+					font-size:26px;
+					line-height:32px;
+					vertical-align:middle;
+					float:none;
+				}
+			}
+			
+			label{
+				font-weight:bold;
+				margin-left:18px;
+				width:30%;
+				@media (max-width: @screen-sm-min){
+					width:auto;
+					margin-left:8px;
+				}
+			}
+			
+			span{
+				width:60%;
+				text-align:right;
+				@media (max-width: @screen-sm-min){
+					width:auto;
+					text-align:left;
+				}
+			}
+			
+			i{
+				float:left;
+				background-image:url(../../image/common/icon-insure.png);
+				background-repeat:no-repeat;
+				width:34px;
+				height:32px;
+				@media (max-width: @screen-sm-min){
+					display:inline-block;
+					vertical-align:middle;
+					float:none;
+				}
+				
+				&.c1{
+					background-position:-34px 0 ;
+				}
+				&.c2{
+					background-position:-34px -32px ;
+				}
+				&.c3{
+					background-position:0 0 ;
+				}
+				&.c4{
+					background-position:0 -32px ;
+				}
+				&.c5{
+					background-position:-34px -192px ;
+				}
+				&.c6{
+					background-position:0 -256px ;
+				}
+				&.c7{
+					background-position:0 -288px ;
+				}
+				&.c8{
+					background-position:0 -320px ;
+				}
+				&.c9{
+					background-position:-34px -224px ;
+				}
+			}
+			
+			&.duty{
+				
+				.duty-detail{
+					display:inline-block;
+					vertical-align:top;
+					width:60%;
+					font-size:14px;
+					padding-top: 6px;
+					@media (max-width: @screen-sm-min){
+						width:55%;
+						font-size:26px;
+						padding-top:0;
+					}
+				}
+				
+				.duty-value{
+					text-align:center;
+					@media (max-width: @screen-sm-min){
+						text-align:right;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,497 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.com.sinosoft</groupId>
+  <artifactId>ecs</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>ecs</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>3.1.1.RELEASE</spring.version>
+		<spring-security.version>3.0.5.RELEASE</spring-security.version>
+		<hibernate.version>3.5.4-Final</hibernate.version>
+		<struts2.version>2.3.15.3</struts2.version>
+		<jetty.version>6.1.26</jetty.version>
+		<jackson-version>1.7.2</jackson-version>
+		<compile_version>1.6</compile_version>
+  </properties>
+<repositories>
+		<repository>
+			<id>TAOBAO</id>
+			<name>Team Nexus Repository</name>
+			<url>http://sinosoft-ecs.com:8081/nexus/content/groups/TAOBAO</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		  <repository>     
+		      <id> maven-net-cn</id>     
+		      <name> Maven China Mirror</name>     
+		      <url>http://repository.sonatype.org/content/groups/public/</url>     
+		      <releases>     
+		        <enabled> true</enabled>     
+		      </releases>     
+		      <snapshots>     
+		        <enabled> false</enabled>     
+		      </snapshots>     
+   		 </repository>  
+</repositories>
+  
+	<dependencyManagement>
+		<dependencies>
+			<!-- 开始security依赖包 -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring-security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring-security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring-security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-taglibs</artifactId>
+				<version>${spring-security.version}</version>
+			</dependency>
+			<!--结束security依赖包 -->
+
+			<!-- 开始spring依赖包 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jms</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<!-- 结束spring依赖包 -->
+			<!-- 开始aspectj依赖包 -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>1.6.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.6.9</version>
+			</dependency>
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib-nodep</artifactId>
+				<version>2.2</version>
+			</dependency>
+			<!-- 结束aspectj依赖包 -->
+			<!-- 开始spring web json 依赖包 -->
+			
+			<dependency>
+				<groupId>net.sf.json-lib</groupId>
+				<artifactId>json-lib</artifactId>
+				<version>2.4</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.ezmorph</groupId>
+				<artifactId>ezmorph</artifactId>
+				<version>1.0.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-core-asl</artifactId>
+				<version>${jackson-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>${jackson-version}</version>
+			</dependency>
+
+			<!-- 结束spring web json 依赖包 -->
+
+
+			<!-- 开始hibernate 依赖包 -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-annotations</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-ehcache</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.11.0.GA</version>
+			</dependency>
+			<!-- 开始hibernate 依赖包 -->
+
+			<!-- 开始struts2依赖包 -->
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-spring-plugin</artifactId>
+				<version>${struts2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-json-plugin</artifactId>
+				<version>${struts2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-convention-plugin</artifactId>
+				<version>${struts2.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-config-browser-plugin</artifactId>
+				<version>${struts2.version}</version>
+			</dependency>
+			<!-- 结束Struts2依赖包 -->
+
+			<!-- 开始log4j依赖包 -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+			<!-- 结束log4j依赖包 -->
+
+			<!-- 开始jetty依赖包 -->
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty</artifactId>
+				<version>${jetty.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jsp-2.1-jetty</artifactId>
+				<version>${jetty.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- 结束jetty依赖包 -->
+
+
+			<!-- 开始数据库连接池依赖包 -->
+			<dependency>
+				<groupId>p6spy</groupId>
+				<artifactId>p6spy</artifactId>
+				<version>1.3</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>c3p0</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>0.9.1.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.oracle</groupId>
+				<artifactId>ojdbc14</artifactId>
+				<version>10.2.0.2.0</version>
+			</dependency>
+			<!-- <dependency> <groupId>com.microsoft.sqlserver.jdbc</groupId> <artifactId>sqljdbc4</artifactId> 
+				<version>1.0</version> </dependency> -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.26</version>
+			</dependency>
+			<!-- 结束数据库连接池依赖包 -->
+
+			<!-- 开始J2EE依赖包 -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+			<!-- 结束J2EE依赖包 -->
+
+			<!-- 开始common的依赖包 -->
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.6</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.8</version>
+			</dependency>
+			<!-- 结束common的依赖包 -->
+			
+			<!-- 模板start -->
+			<dependency>
+	            <groupId>org.apache.velocity</groupId>
+	            <artifactId>velocity</artifactId>
+	            <version>1.7</version>
+	        </dependency>
+	        <!-- 模板end -->
+	        
+	        <!-- java mail start -->
+	        <dependency>
+			  <groupId>com.sun.mail</groupId>
+			  <artifactId>javax.mail</artifactId>
+			  <version>1.5.1</version>
+			</dependency> 
+	        <!-- java mail end-->
+	        
+			<!-- 开始junit测试包 -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.9</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- 结束junit测试包 -->
+
+			<!-- 开始POI的依赖包 -->
+			<dependency>
+				<groupId>poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>3.0.2-FINAL</version>
+			</dependency>
+			<!-- 结束POI的依赖包 -->
+
+			<!-- 开始ECS自有jar包 -->
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-config</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-core</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-domain</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-exception</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-permission</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-user</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-monitoring</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-log</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				<dependency>
+					  <groupId>cn.com.sinosoft</groupId>
+					  <artifactId>ecs-product</artifactId>
+					  <version>0.0.1-SNAPSHOT</version>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis-jaxrpc</artifactId>
+					<version>1.4</version>
+				</dependency>
+			<!-- 结束ECS自有jar包 -->
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+			<!-- 
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>${compile_version}</source>
+						<target>${compile_version}</target>
+					</configuration>
+				</plugin>
+				 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.4.2</version>
+					<configuration>
+						<skipTests>true</skipTests>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>maven-jetty-plugin</artifactId>
+					<version>${jetty.version}</version>
+					<configuration>
+						<requestLog implementation="org.mortbay.jetty.NCSARequestLog">
+							<append>true</append>
+						</requestLog>
+						<scanIntervalSeconds>10</scanIntervalSeconds>
+						<scanTargets>
+							<scanTarget>src/main/java</scanTarget>
+							<scanTarget>src/main/webapp/WEB-INF</scanTarget>
+							<scanTarget>src/main/resources</scanTarget>
+						</scanTargets>
+						<scanTargetPatterns>
+							<scanTargetPattern>
+								<directory>src/main</directory>
+								<includes>
+									<include>**/*.java</include>
+									<include>**/*.properties</include>
+									<include>**/*.xml</include>
+								</includes>
+								<excludes>
+									<exclude>**/*.js</exclude>
+									<exclude>**/*.css</exclude>
+									<exclude>**/*.jsp</exclude>
+								</excludes>
+							</scanTargetPattern>
+						</scanTargetPatterns>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	
+	<modules>
+		<module>../ecs-config</module>
+		<module>../ecs-core</module>
+		<module>../ecs-domain</module>
+		<module>../ecs-exception</module>
+		<module>../ecs-permission</module>
+		<module>../ecs-user</module>
+		<module>../ecs-monitoring</module>
+		<module>../ecs-log</module>
+	    <module>../ecs-product</module>
+		
+		<!-- 信诺部分 -->
+		<!-- 
+		<module>../cigna-business</module>
+		<module>../cigna-domain</module>
+		<module>../cigna-web</module>
+		 -->
+		
+		<!-- 海达部分 -->
+		<!-- 
+		<module>../cmhoulder-domain</module>
+		<module>../cmhoulder-web</module>
+		<module>../cmhoulder-customer</module>
+		<module>../cmhoulder-config</module>
+		<module>../cmhoulder-business</module>
+		-->
+	</modules>
+
+</project>

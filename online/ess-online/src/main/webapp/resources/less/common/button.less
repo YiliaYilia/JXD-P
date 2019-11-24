@@ -1,0 +1,224 @@
+.btn{
+	.inline-block();
+	cursor:pointer;
+	text-align:center;
+	
+	&.buy,&.quote{
+		background:@color-manulife;
+		color:#fff;
+		width:175px;
+		height:46px;
+		line-height:46px;
+		border-radius:8px;
+		font-size:18px;
+		
+		span{
+		}
+		b{
+			width:50px;
+			height:46px;
+			float:left;
+			background-position:center 10px;
+			background-repeat:no-repeat;
+			margin-left:15px;
+		}
+		
+		@media (max-width: @screen-sm-min){
+			height:56px;
+			width:151px;
+			line-height:56px;
+			border-radius:5px;
+			text-align:center;
+			font-size:21px;
+			span{
+				height:24px;
+				line-height:24px;
+				display:inline-block;
+				vertical-align: middle;
+				padding:0 5px;
+				border-right:2px solid #fff;
+			}
+			b{
+				width:50px;
+				display:inline-block;
+				height:56px;
+				vertical-align: middle;
+				float:none;
+				background-position:center;
+				margin-left:0;
+			}
+		}
+	}
+	
+	&.buy{
+		b{
+			background-image:url(../../image/common/icon-chart.png);
+		}
+	}
+	&.quote{
+		b{
+			background-image:url(../../image/common/icon-calc.png);
+		}
+	}
+	
+	&.b-insure{
+		width:197px;
+		height:35px;
+		background:#ba4c01;
+		border-radius:10px;
+		line-height:35px;
+		color:#fff;
+		
+		span{
+			display:inline-block;
+			vertical-align: middle;
+			padding:0 12px;
+			font-size:18px;
+		}
+		b{
+			background:url(../../image/common/icon-chart.png) center no-repeat;
+			width:40px;
+			display:inline-block;
+			height:40px;
+			vertical-align: middle;
+		}
+	}
+	
+	&.b-quote{
+		width:197px;
+		height:35px;
+		background:#ba4c01;
+		border-radius:5px;
+//		line-height:28px;
+		color:#fff;
+		span{
+			display:inline-block;
+			vertical-align: middle;
+			font-size:16px;
+		}
+		b{
+			background:url(../../image/common/icon-calc-sm.png) left center no-repeat;
+			width:18px;
+			display:inline-block;
+			height:35px;
+			vertical-align: middle;
+		}
+	}
+	
+	&.insure{
+		background:@color-manulife;
+		color:#fff;
+		height:54px;
+		line-height:54px;
+		display:block;
+		text-align:center;
+		font-size:16px;
+		border-radius:6px;
+		@media (max-width: @screen-sm-min){
+			height:@btn-height-insure;
+			display:block;
+			text-align:center;
+			line-height:@btn-height-insure;
+			font-size:32px;
+			border-radius:0;	
+			&.qt{
+				b{
+					width:33px;
+					height:42px;
+					background:url(../../image/common/icon-calc-lg.png) center no-repeat;
+				}
+			}
+		}
+		
+		span{
+			display:inline-block;
+			vertical-align: middle;
+			padding:0 12px;
+			font-size:16px;
+			@media (max-width: @screen-sm-min){
+				font-size:32px;
+			}
+		}
+		
+		b{
+			display:inline-block;
+			vertical-align: middle;
+			background:url(../../image/common/icon-list.png) center no-repeat;
+			width:24px;
+			height:30px;
+			@media (max-width: @screen-sm-min){
+				background:url(../../image/common/icon-list-lg.png) center no-repeat;
+				width:32px;
+				height:40px;
+			}
+		}
+	}	
+	
+	&.back{
+		background:#68b080;
+		color:#fff;
+		height:54px;
+		line-height:54px;
+		display:block;
+		text-align:center;
+		font-size:16px;
+		border-radius:6px;
+		
+		@media (max-width: @screen-sm-min){
+			border-radius:0;
+			margin-top:22px;
+			height:@btn-height-insure;
+			display:block;
+			text-align:center;
+			line-height:@btn-height-insure;
+			font-size:32px;
+		}
+		
+		span{
+			display:inline-block;
+			vertical-align: middle;
+			padding:0 12px;
+			font-size:16px;
+			@media (max-width: @screen-sm-min){
+				font-size:32px;
+			}
+		}
+		b{
+			display:inline-block;
+			vertical-align: middle;
+			@media (max-width: @screen-sm-min){
+				background:url(../../image/common/icon-list-lg.png) center no-repeat;
+				width:32px;
+				height:40px;
+			}
+		}
+	}	
+	
+	&.ok{
+		background: #F6171F;
+		color: #FFF;
+	}
+	
+	&.normal{
+		height: 27px;
+		line-height: 27px;
+		font-size: 14px;
+		padding: 0 10px;
+		min-width: 50px;
+	}
+	&.large{
+		height: 34px;
+		line-height: 34px;
+		padding: 0 10px;
+		min-width: 100px;
+		font-size: 16px;
+	}
+}
+
+.action{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	background:@color-white;
+	z-index:1000;
+}

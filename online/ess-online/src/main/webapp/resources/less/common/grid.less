@@ -1,0 +1,36 @@
+//grid
+.container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  .clearfix();
+}
+
+.container {
+	.container-fixed();
+	
+	width:@container-lg;
+	
+	@media (max-width: @screen-sm-min){
+		width:@container-sm;
+	}
+}
+
+.row {
+  .clearfix();
+}
+
+.make-grid-columns();
+
+.make-grid-columns-float(lg);
+.make-grid(@grid-columns,lg, width);
+.make-grid(@grid-columns,lg, pull);
+.make-grid(@grid-columns,lg, push);
+.make-grid(@grid-columns,lg, offset);
+
+@media (max-width: @screen-sm-min) {
+  .make-grid-columns-float(sm);
+  .make-grid(@grid-columns, sm, width);
+  .make-grid(@grid-columns, sm, pull);
+  .make-grid(@grid-columns, sm, push);
+  .make-grid(@grid-columns, sm, offset);
+}

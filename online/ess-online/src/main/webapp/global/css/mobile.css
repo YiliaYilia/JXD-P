@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+/*common*/
+html,head,body,div,a,ul,li,iframe{margin: 0;padding: 0;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul{list-style: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+a{text-decoration: none;}
+input{border-style:none;outline:medium;outline: 0 none;-webkit-appearance:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{border:0;display: block;}
+body{font-family: 'Microsoft YaHei';font-size: 20px;background: #fffaef;min-width:484px;}
+.clear{clear: both;}
+select{border-style:none;outline:medium;outline: 0 none;background:#fffaef;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/*bingding*/
+.content {width:80%;margin:0 auto;}
+.logo_t{width:50%;margin-top:40px;margin-bottom:40px;}
+.input{height:80px;border:1px solid #d9d4c9;border-radius:10px;border-bottom-width:3px;border-left-width:2px;border-right-width:2px;
+		width:100%;text-align: left;padding-left:2%;font-size: 32px;color: #444444;margin-top:50px;margin-bottom: 20px;}
+.input_btn{height:60px;width:100%;margin-top:80px}
+.w_type{width:40%;float: left;line-height: 80px; height: 60px; }
+.sel_wrap{height:80px;width:50%;background:#fffaef url(../images/icons.png) no-repeat right ;
+    color: #a1a1a1; font-size: 32px;float:left;border:0px;
+    position:relative;_filter:alpha(opacity=0);
+}
+.sel_wrap label{padding-left:10px;font-size:32px;z-index:2; color: #a1a1a1; line-height: 60px; height: 60px; display: block;}
+.sel_wrap .select{border-style:none;width:100%; height:60px; line-height:80px;
+	 z-index:4;position:absolute;top:0;left:0;margin:0;padding:0;opacity:0;filter:alpha(opacity=0);
+	 border:0; font-size: 32px;font-family: 'Microsoft YaHei';color: #a1a1a1;}
+.input_text{border-style:none;width:50%;float:left; line-height: 80px; height: 58px;
+	font-family: 'Microsoft YaHei';color: #a1a1a1;background-color:#fffaef;font-size: 32px;text-indent:0.5em;}
+.bingding_btn{width:60%;margin:0 auto;font-family: 'Microsoft YaHei';color: #FFF;font-size: 38px;border-radius:10px;line-height: 60px;background-color: #027e64;
+				text-align: center;}

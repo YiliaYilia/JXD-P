@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title></title>  
+</head>  
+<script>   
+//分享跳转页面
+(function(){  
+    var url = window.location.href;  
+    var brNo = getQueryString("brNO");			//取渠道信息
+   	var source = getQueryString("source");		//取来源
+   	if(source=="longPolicyHome"){//成长卫士分享
+   		if(brNo==null||brNo=="A0000"||brNo.length==0){
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/longPolicyHome&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";//生产
+   		}else{
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/longPolicyHome?brNo="+brNo+"&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
+   		}
+   	}else if(source=="WENAIBAO"){//稳爱保
+   		if(brNo==null||brNo=="A0000"||brNo.length==0){
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/WABHomePage&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";//生产
+   		}else{
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/WABHomePage?brNo="+brNo+"&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
+   		}
+   	}else if(source=="WENJIABAO"){//稳驾保
+   		if(brNo==null||brNo=="A0000"||brNo.length==0){
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/WJBHomePage&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";//生产
+   		}else{
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/WJBHomePage?brNo="+brNo+"&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
+   		}
+   	}else if(source=="RUIXANKANG"){//瑞享安康
+   		if(brNo==null||brNo=="A0000"||brNo.length==0){
+//    			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx618b6902989a293e&redirect_uri=http://testweixin.oldmutual-guodian.com/online/msl/sales/RXAKHomePage?brNo=A0000&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";//测试
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/RXAKHomePage&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";//生产
+   		}else{
+//    			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx618b6902989a293e&redirect_uri=http://testweixin.oldmutual-guodian.com/online/msl/sales/RXAKHomePage?brNo="+brNo+"&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";//测试
+   			url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5be4b58fee2539db&redirect_uri=https://weixin.oldmutual-guodian.com/onlineApp/msl/sales/RXAKHomePage?brNo="+brNo+"&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
+   		}
+   	}
+   	
+   	
+   	
+    window.location.href = url;  
+})(); 
+//获取参数
+function getQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+}  
+</script>  
+<body>  
+</body>  
+</html>
